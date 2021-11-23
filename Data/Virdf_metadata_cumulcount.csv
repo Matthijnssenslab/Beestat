@@ -1,0 +1,301 @@
+,Sample,Virus,ViralLoad,Province,Status,Race,LAT,LON,Commune,Mitesper100,TXPRE,TXWIN,TXPOST,Year
+12_1,12_1,Cumulative,24642.449999999997,Oost-Vl,Healthy,Carnica,4.3287322,50.9341625,Meise,0,None,Thymol,None,12
+12_10,12_10,Cumulative,0.0,Oost-Vl,Healthy,Unknown,4.3091107,51.1712275,Kruibeke,8.887458151,Thymol,None,Thymol,12
+12_100,12_100,Cumulative,144169.83,Limburg,Healthy,Buckfast + Carnica,5.3076895,51.2305657,Lommel,0.734693878,OA,Thymol,None,12
+12_101,12_101,Cumulative,0.0,Limburg,Healthy,Buckfast + Carnica,5.3076895,51.2305657,Lommel,11.8575233,OA,Thymol,None,12
+12_102,12_102,Cumulative,0.0,Limburg,Healthy,Buckfast + Carnica,5.3076895,51.2305657,Lommel,9.275825346,OA,Thymol,None,12
+12_103,12_103,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.098112,51.0312293,Dendermonde,3.388429752,OA,None,None,12
+12_104,12_104,Cumulative,0.0,West. Vl.,Healthy,Carnica,2.8647185,51.0333408,Diksmuide,0,OA,OA,OA,12
+12_105,12_105,Cumulative,0.0,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,0.734693878,None,None,None,12
+12_106,12_106,Cumulative,38237.850000000006,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,11.8575233,None,None,None,12
+12_107,12_107,Cumulative,0.0,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,9.275825346,None,None,None,12
+12_108,12_108,Cumulative,277200000.0,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,3.476275057,None,None,None,12
+12_109,12_109,Cumulative,0.0,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,0,None,None,None,12
+12_11,12_11,Cumulative,99437.17,West-Vl,WL,Carnica,2.808607209,50.88120105,Elverdinge,0,Thymol+Fluvalinate,OA,None,12
+12_110,12_110,Cumulative,0.0,West. Vl.,WL,Hybrid,3.090295389,51.1846386,Jabbeke,0,None,None,None,12
+12_111,12_111,Cumulative,0.0,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,0,OA,OA,OA,12
+12_112,12_112,Cumulative,818833.2599999998,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,3.337299227,OA,OA,OA,12
+12_113,12_113,Cumulative,0.0,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,0.171632569,OA,OA,OA,12
+12_114,12_114,Cumulative,740592.16,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,0,OA,OA,OA,12
+12_115,12_115,Cumulative,0.0,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,0.182466144,OA,OA,OA,12
+12_116,12_116,Cumulative,0.0,Vl.Br.,Healthy,Hybrid,4.195149073,50.8363077,Schepdaal,0.905577029,OA,OA,OA,12
+12_117,12_117,Cumulative,32462.219999999998,Limburg,WL,Carnica,5.3076895,51.2305657,Lommel,3.404167526,Thymol,None,Fluvalinate,12
+12_118,12_118,Cumulative,182417.47999999998,Limburg,WL,Carnica,5.3076895,51.2305657,Lommel,0,Thymol,None,Fluvalinate,12
+12_119,12_119,Cumulative,0.0,Vl.Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,0,OA,OA,None,12
+12_12,12_12,Cumulative,0.0,West-Vl,Healthy,Carnica,2.808607209,50.88120105,Elverdinge,0,Thymol+Fluvalinate,OA,None,12
+12_120,12_120,Cumulative,17732.4,Vl.Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,0,OA,OA,None,12
+12_121,12_121,Cumulative,0.0,West. Vl.,WL,Carnica,3.341426328,50.99996475,Tielt,5.389982111,None,None,None,12
+12_122,12_122,Cumulative,553763.14,West. Vl.,Healthy,Carnica,2.8647185,51.0333408,Diksmuide,4.267515924,OA,OA,OA,12
+12_123,12_123,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.8855494,51.0068804,Wetteren,1.305743846,OA,None,None,12
+12_124,12_124,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.8855494,51.0068804,Wetteren,0.218880286,OA,None,None,12
+12_125,12_125,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.8855494,51.0068804,Wetteren,2.190152801,OA,None,None,12
+12_126,12_126,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.8855494,51.0068804,Wetteren,2.474022761,OA,None,None,12
+12_127,12_127,Cumulative,4165000000.0,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,30.82991803,OA,OA,OA,12
+12_128,12_128,Cumulative,64684.2,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,5.658031088,OA,OA,OA,12
+12_129,12_129,Cumulative,23008.79,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,2.312556459,OA,OA,OA,12
+12_13,12_13,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.4456359,51.134377,Kontich,3.476275057,OA,OA,OA,12
+12_130,12_130,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,2.402040816,OA,OA,OA,12
+12_131,12_131,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.098112,51.0312293,Dendermonde,6.378737542,Thymol,Thymol,None,12
+12_132,12_132,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.098112,51.0312293,Dendermonde,7.911239749,Thymol,Thymol,None,12
+12_133,12_133,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.098112,51.0312293,Dendermonde,5.263378804,Thymol,Thymol,None,12
+12_134,12_134,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.098112,51.0312293,Dendermonde,1.18501307,Thymol,Thymol,None,12
+12_135,12_135,Cumulative,201475.25999999998,Vl.Br.,Healthy,Carnica,4.299072942,51.0122466,Londerzeel,0,OA,OA,Thymol,12
+12_136,12_136,Cumulative,60648.41999999999,Vl.Br.,Healthy,Carnica,4.299072942,51.0122466,Londerzeel,2.40182218,OA,OA,Thymol,12
+12_137,12_137,Cumulative,30540.23,Vl.Br.,Healthy,Carnica,4.299072942,51.0122466,Londerzeel,2.927622662,OA,OA,Thymol,12
+12_138,12_138,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.299072942,51.0122466,Londerzeel,0,OA,OA,Thymol,12
+12_139,12_139,Cumulative,0.0,West. Vl.,WL,Buckfast,2.972576947,51.23890495,Bredene,4.67222021,Thymol,Thymol,None,12
+12_14,12_14,Cumulative,5996791.5,Antwerpen,WL,Carnica,4.4456359,51.134377,Kontich,0,OA,OA,OA,12
+12_140,12_140,Cumulative,68190.85,West. Vl.,WL,Buckfast,2.972576947,51.23890495,Bredene,0.9910086,Thymol,Thymol,None,12
+12_141,12_141,Cumulative,62614.3,West. Vl.,Healthy,Buckfast,2.8647185,51.0333408,Diksmuide,2.476340694,Thymol,None,None,12
+12_142,12_142,Cumulative,0.0,West. Vl.,Healthy,Buckfast,2.8647185,51.0333408,Diksmuide,2.750554547,Thymol,None,None,12
+12_143,12_143,Cumulative,200972.31000000006,Limburg,WL,Carnica,5.0893974,51.0681628,Tessenderlo,20,Thymol,OA,None,12
+12_144,12_144,Cumulative,21770000.0,Limburg,WL,Carnica,5.0893974,51.0681628,Tessenderlo,14.28571429,Thymol,OA,None,12
+12_145,12_145,Cumulative,56652.890000000014,Vl-Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,1.031800191,OA,OA,None,12
+12_146,12_146,Cumulative,0.0,Vl-Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,0,OA,OA,None,12
+12_147,12_147,Cumulative,229052.81000000006,Limburg,WL,Carnica,5.5540751,51.0933149,Meeuwen-Gruitrode,1.287553648,MO,None,None,12
+12_148,12_148,Cumulative,15610000.0,Limburg,WL,Carnica,5.5540751,51.0933149,Meeuwen-Gruitrode,2.879719052,MO,None,None,12
+12_149,12_149,Cumulative,0.0,Vl-Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,0,OA,OA,None,12
+12_15,12_15,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.771431808,50.8241245,Bierbeek,0.385426076,Thymol,OA,Thymol,12
+12_150,12_150,Cumulative,48797.350000000006,Vl-Br.,Healthy,Carnica,5.101581003,50.89519195,Geetbets,0,OA,OA,None,12
+12_16,12_16,Cumulative,380800000.0,Vl-Br.,WL,Carnica,4.771431808,50.8241245,Bierbeek,1.42074364,Thymol,OA,Thymol,12
+12_17,12_17,Cumulative,60802.49,Antwerpen,WL,Carnica,4.4593335,51.1741789,Mortsel,1.916001388,MO,Heat,None,12
+12_18,12_18,Cumulative,13582.660000000003,Antwerpen,Healthy,Carnica,4.4593335,51.1741789,Mortsel,1.35678392,MO,Heat,None,12
+12_19,12_19,Cumulative,18960.55,West-Vl,Healthy,Buckfast,3.073207597,50.89006565,Moorslede,0,OA,OA,OA,12
+12_2,12_2,Cumulative,4641900.62,Oost-Vl,WL,Carnica,4.3287322,50.9341625,Meise,0,None,Thymol,None,12
+12_20,12_20,Cumulative,0.0,West-Vl,WL,Buckfast,3.073207597,50.89006565,Moorslede,1.220680958,OA,OA,OA,12
+12_21,12_21,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.5385226,50.7729254,Overijse,6.574172892,None,None,None,12
+12_22,12_22,Cumulative,0.0,Vl-Br.,WL,Carnica,4.5385226,50.7729254,Overijse,3.954455879,None,None,None,12
+12_23,12_23,Cumulative,0.0,Limburg,Healthy,Carnica,5.0893974,51.0681628,Tessenderlo,0,Thymol,OA,None,12
+12_24,12_24,Cumulative,0.0,Limburg,WL,Carnica,5.0893974,51.0681628,Tessenderlo,3.388429752,Thymol,OA,None,12
+12_25,12_25,Cumulative,0.0,Limburg,Healthy,Carnica,5.5540751,51.0933149,Meeuwen-Gruitrode,7.574686797,MO,None,None,12
+12_26,12_26,Cumulative,55075.649999999994,Limburg,WL,Carnica,5.5540751,51.0933149,Meeuwen-Gruitrode,3.151790217,MO,None,None,12
+12_27,12_27,Cumulative,0.0,Oost-Vl,Healthy,Carnica,3.4154538,51.2263133,Maldegem,0,OA,None,OA,12
+12_28,12_28,Cumulative,0.0,Oost-Vl,WL,Carnica,3.4154538,51.2263133,Maldegem,4.6484375,OA,None,OA,12
+12_29,12_29,Cumulative,107055.69,Oost-Vl,WL,Carnica,5.147209971,51.0067479,Meldert,0,Thymol,OA,Thymol,12
+12_3,12_3,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.477387,51.1486117,Hove,0,OA,OA,OA,12
+12_30,12_30,Cumulative,4847343.62,Oost-Vl,Healthy,Carnica,5.147209971,51.0067479,Meldert,2.802112457,Thymol,OA,Thymol,12
+12_31,12_31,Cumulative,714132.3,Limburg,WL,Carnica,5.5001456,50.9654864,Genk,11.66243194,OA+Thymol,Thymol,OA+Thymol,12
+12_32,12_32,Cumulative,33530000.0,Limburg,WL,Carnica,5.5001456,50.9654864,Genk,36.21331545,OA+Thymol,Thymol,OA+Thymol,12
+12_33,12_33,Cumulative,0.0,Limburg,Healthy,Carnica,5.5001456,50.9654864,Genk,1.160639193,OA+Thymol,Thymol,OA+Thymol,12
+12_34,12_34,Cumulative,0.0,Limburg,Healthy,Carnica,5.5001456,50.9654864,Genk,0,OA+Thymol,Thymol,OA+Thymol,12
+12_35,12_35,Cumulative,725047.47,Limburg,WL,Carnica,5.203424912,50.82694775,Sint-Truiden,0.293676313,Thymol,OA,None,12
+12_36,12_36,Cumulative,0.0,Limburg,WL,Carnica,5.203424912,50.82694775,Sint-Truiden,0.246322272,Thymol,OA,None,12
+12_37,12_37,Cumulative,0.0,Limburg,Healthy,Carnica,5.203424912,50.82694775,Sint-Truiden,18.29300484,Thymol,OA,None,12
+12_38,12_38,Cumulative,190355.90000000002,Limburg,Healthy,Carnica,5.203424912,50.82694775,Sint-Truiden,2.75210084,Thymol,OA,None,12
+12_39,12_39,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.431231831,51.332759,Kapellen,2.846685645,OA+Amitraz,OA,Thymol+Fluvalinate,12
+12_4,12_4,Cumulative,0.0,Antwerpen,WL,Carnica,4.477387,51.1486117,Hove,2.75210084,OA,OA,OA,12
+12_40,12_40,Cumulative,81776.66,Vl-Br.,Healthy,Carnica,4.431231831,51.332759,Kapellen,9.631715771,OA+Amitraz,OA,Thymol+Fluvalinate,12
+12_41,12_41,Cumulative,91851.20000000001,Vl-Br.,WL,Carnica,4.431231831,51.332759,Kapellen,36.21331545,OA+Amitraz,OA,Thymol+Fluvalinate,12
+12_42,12_42,Cumulative,0.0,Vl-Br.,WL,Carnica,4.431231831,51.332759,Kapellen,0,OA+Amitraz,OA,Thymol+Fluvalinate,12
+12_43,12_43,Cumulative,0.0,Antwerpen,Healthy,Buckfast + Carnica,4.510406865,51.1596941,Boechout,0,Thymol+MO,MO,None,12
+12_44,12_44,Cumulative,209606.81000000006,Antwerpen,Healthy,Buckfast + Carnica,4.510406865,51.1596941,Boechout,3.215258856,Thymol+MO,MO,None,12
+12_45,12_45,Cumulative,11830000000.0,Antwerpen,WL,Buckfast + Carnica,4.510406865,51.1596941,Boechout,0,Thymol+MO,MO,None,12
+12_46,12_46,Cumulative,6473349.329999998,Antwerpen,WL,Buckfast + Carnica,4.510406865,51.1596941,Boechout,1.475409836,Thymol+MO,MO,None,12
+12_47,12_47,Cumulative,11667.95,Oost-Vl,Healthy,Buckfast,3.532983112,50.845989,Wortegem-petegem,5.01984127,OA,OA,None,12
+12_48,12_48,Cumulative,0.0,Oost-Vl,Healthy,Buckfast,3.532983112,50.845989,Wortegem-petegem,3.481822837,OA,OA,None,12
+12_49,12_49,Cumulative,0.0,Oost-Vl,WL,Buckfast,3.532983112,50.845989,Wortegem-petegem,6.326383896,OA,OA,None,12
+12_5,12_5,Cumulative,0.0,West-Vl,Healthy,Unknown,3.292091113,51.2553021,Damme,0.246322272,Thymol,None,None,12
+12_50,12_50,Cumulative,126009.87000000001,Oost-Vl,WL,Buckfast,3.532983112,50.845989,Wortegem-petegem,11.71953255,OA,OA,None,12
+12_51,12_51,Cumulative,0.0,West-Vl,Healthy,Unknown,3.023122345,51.12819605,Eernegem,0.983949756,OA,OA,OA,12
+12_52,12_52,Cumulative,0.0,West-Vl,WL,Unknown,3.023122345,51.12819605,Eernegem,7.090475157,OA,OA,OA,12
+12_53,12_53,Cumulative,35227.36,Antwerpen,Healthy,Carnica,4.8597257,51.1438611,Olen,7.337142857,OA,OA,OA,12
+12_54,12_54,Cumulative,69622.14000000001,Antwerpen,WL,Carnica,4.8597257,51.1438611,Olen,0.514191691,OA,OA,OA,12
+12_55,12_55,Cumulative,0.0,Vl-Br.,WL,Carnica,4.948470729,51.0192772,Testelt,1.238198421,OA,OA,OA,12
+12_56,12_56,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.948470729,51.0192772,Testelt,0.43251305,OA,OA,OA,12
+12_57,12_57,Cumulative,305900000.0,Vl-Br.,WL,Hybrid,4.5385226,50.7729254,Overijse,8.887458151,OA,OA,None,12
+12_58,12_58,Cumulative,811837.6000000001,Vl-Br.,Healthy,Hybrid,4.5385226,50.7729254,Overijse,5.389982111,OA,OA,None,12
+12_59,12_59,Cumulative,0.0,Limburg,WL,Carnica,5.791733,51.0947181,Maaseik,0,None,OA,Thymol,12
+12_6,12_6,Cumulative,8890000.0,West-Vl,WL,Unknown,3.292091113,51.2553021,Damme,0.773722628,Thymol,None,None,12
+12_60,12_60,Cumulative,0.0,Limburg,Healthy,Carnica,5.791733,51.0947181,Maaseik,4.188018433,None,OA,Thymol,12
+12_61,12_61,Cumulative,0.0,Limburg,Healthy,Carnica,5.572202585,51.0005396,As,0.603661554,Thymol,Thymol,None,12
+12_62,12_62,Cumulative,33679.66,Limburg,WL,Carnica,5.572202585,51.0005396,As,1.287553648,Thymol,Thymol,None,12
+12_63,12_63,Cumulative,15025.150000000001,Antwerpen,Healthy,Carnica,4.70338521,51.2257319,Pulderbos,6.261343013,Thymol,OA,OA+Thymol,12
+12_64,12_64,Cumulative,0.0,Antwerpen,WL,Carnica,4.70338521,51.2257319,Pulderbos,1.991193738,Thymol,OA,OA+Thymol,12
+12_65,12_65,Cumulative,0.0,Limburg,WL,Carnica,5.572202585,51.0005396,As,4.188018433,OA,None,None,12
+12_66,12_66,Cumulative,64784.58000000001,Limburg,Healthy,Carnica,5.572202585,51.0005396,As,4.27019367,OA,None,None,12
+12_67,12_67,Cumulative,967998.0799999998,West-Vl,Healthy,Hybrid,3.186445006,50.8121065,Wevelgem,0,Thymol,None,Thymol,12
+12_68,12_68,Cumulative,0.0,West-Vl,WL,Hybrid,3.186445006,50.8121065,Wevelgem,1.210434783,Thymol,None,Thymol,12
+12_69,12_69,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.730761495,50.88991545,Kessel-lo,1.305743846,OA,OA,OA,12
+12_7,12_7,Cumulative,0.0,Limburg,Healthy,Buckfast,5.696445,50.9635024,Maasmechelen,2.846685645,None,None,None,12
+12_70,12_70,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.730761495,50.88991545,Kessel-lo,6.261343013,OA,OA,OA,12
+12_71,12_71,Cumulative,0.0,Vl-Br.,WL,Carnica,4.730761495,50.88991545,Kessel-lo,4.27019367,OA,OA,OA,12
+12_72,12_72,Cumulative,0.0,Vl-Br.,WL,Carnica,4.730761495,50.88991545,Kessel-lo,11.66243194,OA,OA,OA,12
+12_73,12_73,Cumulative,959000000.0,Antwerpen,WL,Carnica,4.7132557,51.2716725,Zoersel,4.291187739,OA+Coumaphos,Coumaphos,None,12
+12_74,12_74,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.7132557,51.2716725,Zoersel,0.603661554,OA+Coumaphos,Coumaphos,None,12
+12_75,12_75,Cumulative,0.0,Antwerpen,WL,Carnica,4.7132557,51.2716725,Zoersel,9.416342412,OA+Coumaphos,Coumaphos,None,12
+12_76,12_76,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.7132557,51.2716725,Zoersel,0.722499458,OA+Coumaphos,Coumaphos,None,12
+12_77,12_77,Cumulative,0.0,West-Vl,WL,Buckfast + Carnica,2.654885824,51.071043,Veurne,9.747003995,OA,OA,OA,12
+12_78,12_78,Cumulative,8890000.0,West-Vl,Healthy,Buckfast + Carnica,2.654885824,51.071043,Veurne,0.486555698,OA,OA,OA,12
+12_79,12_79,Cumulative,0.0,West-Vl,Healthy,Buckfast + Carnica,2.654885824,51.071043,Veurne,2.874951305,OA,OA,OA,12
+12_8,12_8,Cumulative,228662.84,Limburg,WL,Buckfast,5.696445,50.9635024,Maasmechelen,9.631715771,None,None,None,12
+12_80,12_80,Cumulative,8538.88,West-Vl,WL,Buckfast + Carnica,2.654885824,51.071043,Veurne,22.16350124,OA,OA,OA,12
+12_81,12_81,Cumulative,291200000.0,Oost-Vl,WL,Carnica,3.412339,51.1392692,Knesselare,8.968944099,OA,OA,OA,12
+12_82,12_82,Cumulative,0.0,Oost-Vl,WL,Carnica,3.412339,51.1392692,Knesselare,4.087591241,OA,OA,OA,12
+12_83,12_83,Cumulative,91795.34,Oost-Vl,Healthy,Carnica,3.412339,51.1392692,Knesselare,0.905172414,OA,OA,OA,12
+12_84,12_84,Cumulative,0.0,Oost-Vl,Healthy,Carnica,3.412339,51.1392692,Knesselare,2.635938063,OA,OA,OA,12
+12_85,12_85,Cumulative,0.0,Vl-Br.,Healthy,Carnica,4.474407,50.7674846,Hoeilaart,2.750554547,Thymol,OA,Thymol,12
+12_86,12_86,Cumulative,0.0,Vl-Br.,WL,Carnica,4.474407,50.7674846,Hoeilaart,7.911239749,Thymol,OA,Thymol,12
+12_87,12_87,Cumulative,157239.32,West-Vl,Healthy,Carnica,3.292091113,51.2553021,Damme,7.420612813,Thymol+Coumaphos,None,Thymol,12
+12_88,12_88,Cumulative,161651.49000000002,West-Vl,WL,Carnica,3.292091113,51.2553021,Damme,1.492178099,Thymol+Coumaphos,None,Thymol,12
+12_89,12_89,Cumulative,0.0,Antwerpen,WL,Carnica,4.8242404,51.238218,Lille,0.293676313,OA+Thymol,OA,OA,12
+12_9,12_9,Cumulative,46802.42,Oost-Vl,WL,Unknown,4.3091107,51.1712275,Kruibeke,0,Thymol,None,Thymol,12
+12_90,12_90,Cumulative,127167.95000000001,Antwerpen,Healthy,Carnica,4.8242404,51.238218,Lille,1.089808274,OA+Thymol,OA,OA,12
+12_91,12_91,Cumulative,15050000.0,Limburg,WL,Carnica,5.2750485,51.0233485,Heusden-Zolder,7.420612813,OA+Thymol,None,None,12
+12_92,12_92,Cumulative,0.0,Limburg,WL,Carnica,5.2750485,51.0233485,Heusden-Zolder,0,OA+Thymol,None,None,12
+12_93,12_93,Cumulative,0.0,Limburg,WL,Carnica,5.2750485,51.0233485,Heusden-Zolder,1.492178099,OA+Thymol,None,None,12
+12_94,12_94,Cumulative,2170000000.0,Vl.Br.,Healthy,Carnica,4.0614624,50.7720719,Oetlingen,0.350346021,Thymol,OA,Thymol,12
+12_95,12_95,Cumulative,25921.49,Vl.Br.,Healthy,Carnica,4.0614624,50.7720719,Oetlingen,9.585348998,Thymol,OA,Thymol,12
+12_96,12_96,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.0614624,50.7720719,Oetlingen,10.86790045,Thymol,OA,Thymol,12
+12_97,12_97,Cumulative,0.0,Oost. Vl.,WL,Buckfast + Carnica,3.719334,50.8793307,Zwalm,0.983949756,None,None,None,12
+12_98,12_98,Cumulative,0.0,Oost. Vl.,WL,Buckfast + Carnica,3.719334,50.8793307,Zwalm,7.090475157,None,None,None,12
+12_99,12_99,Cumulative,0.0,Oost. Vl.,WL,Buckfast + Carnica,3.719334,50.8793307,Zwalm,2.476340694,None,None,None,12
+13_1,13_1,Cumulative,0.0,Limburg,Healthy,Carnica,5.449157219,51.10874,Peer,0.284697509,OA+Thymol,OA,OA,13
+13_10,13_10,Cumulative,0.0,West.Vl.,Healthy,Unknown,3.463734552,50.844003,Anzegem,0,Thymol,OA,None,13
+13_100,13_100,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,3.8504738,51.029657,Laarne,0,OA+Thymol,Coumaphos,OA,13
+13_101,13_101,Cumulative,17894.1,Oost. Vl.,Healthy,Carnica,3.8504738,51.029657,Laarne,0,OA+Thymol,Coumaphos,OA,13
+13_102,13_102,Cumulative,16081.45,Oost. Vl.,WL,Carnica,3.8504738,51.029657,Laarne,0,OA+Thymol,Coumaphos,OA,13
+13_103,13_103,Cumulative,55860000.0,Oost. Vl.,WL,Carnica,3.8504738,51.029657,Laarne,6.110260337,OA+Thymol,Coumaphos,OA,13
+13_104,13_104,Cumulative,73520.23,Oost. Vl.,Healthy,Carnica,3.8504738,51.029657,Laarne,0.490162237,OA+Thymol,Coumaphos,OA,13
+13_105,13_105,Cumulative,0.0,Vl.Br.,WL,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,2.219863533,OA,Thymol,None,13
+13_106,13_106,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,0.318532819,OA,Thymol,None,13
+13_107,13_107,Cumulative,0.0,Vl.Br.,WL,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,2.151793161,OA,Thymol,None,13
+13_108,13_108,Cumulative,103318.18000000001,Vl.Br.,Healthy,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,1.900326036,OA,Thymol,None,13
+13_109,13_109,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,4.0242373,50.8353611,Ninove,0,Thymol,OA,Thymol,13
+13_11,13_11,Cumulative,0.0,West.Vl.,Healthy,Carnica,3.37894958,51.062755,Ruiselede,4.805393809,None,None,None,13
+13_110,13_110,Cumulative,132963.95,Oost. Vl.,WL,Carnica,4.0242373,50.8353611,Ninove,0.3,Thymol,OA,Thymol,13
+13_111,13_111,Cumulative,0.0,Antwerpen,Healthy,Carnica,5.193773076,51.171804,Balen,0.549189189,OA+Thymol,None,OA,13
+13_112,13_112,Cumulative,0.0,Antwerpen,WL,Carnica,5.193773076,51.171804,Balen,2.261355356,OA+Thymol,None,OA,13
+13_113,13_113,Cumulative,3591000000.0,West-Vl.,WL,Swarm,2.722259264,50.84362245,Poperinge,16.4870148,None,None,None,13
+13_114,13_114,Cumulative,173600000.0,West-Vl.,WL,Swarm,2.722259264,50.84362245,Poperinge,6.605465414,None,None,None,13
+13_115,13_115,Cumulative,20807.920000000002,West-Vl.,WL,Swarm,2.722259264,50.84362245,Poperinge,4.491032477,None,None,None,13
+13_116,13_116,Cumulative,15930.599999999999,West-Vl.,Healthy,Carnica,2.891477451,50.851808,Ieper,0.307692308,OA,OA,None,13
+13_117,13_117,Cumulative,0.0,West-Vl.,Healthy,Carnica,2.891477451,50.851808,Ieper,0,OA,OA,None,13
+13_118,13_118,Cumulative,0.0,West-Vl.,Healthy,Carnica,2.891477451,50.851808,Ieper,1.55993118,OA,OA,None,13
+13_119,13_119,Cumulative,0.0,Antwerpen,WL,Buckfast,4.670951732,51.1611887,Nijlen,0.85860575,OA,None,None,13
+13_12,13_12,Cumulative,0.0,West.Vl.,WL,Carnica,3.37894958,51.062755,Ruiselede,2.331439103,None,None,None,13
+13_120,13_120,Cumulative,200044.11000000002,Antwerpen,WL,Buckfast,4.670951732,51.1611887,Nijlen,1.753744976,OA,None,None,13
+13_121,13_121,Cumulative,80621.23999999999,Antwerpen,WL,Buckfast,4.670951732,51.1611887,Nijlen,7.878787879,OA,None,None,13
+13_122,13_122,Cumulative,91486.92,Antwerpen,Healthy,Carnica,5.0893974,51.0681628,Tessenderlo,0,OA,OA,None,13
+13_123,13_123,Cumulative,45615.08,Antwerpen,Healthy,Carnica,5.0893974,51.0681628,Tessenderlo,0.314063369,OA,OA,None,13
+13_124,13_124,Cumulative,0.0,Antwerpen,Healthy,Carnica,5.0893974,51.0681628,Tessenderlo,0.331910858,OA,OA,None,13
+13_125,13_125,Cumulative,0.0,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,0.523047977,OA,None,None,13
+13_126,13_126,Cumulative,44838.29,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,1.601750547,OA,None,None,13
+13_127,13_127,Cumulative,86009.62999999999,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,0.490322581,OA,None,None,13
+13_128,13_128,Cumulative,610078.6299999999,Antwerpen,Healthy,Carnica,4.597238179,51.3347679,Brecht,11.2,OA,None,OA,13
+13_129,13_129,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.597238179,51.3347679,Brecht,4.246221895,OA,None,OA,13
+13_13,13_13,Cumulative,0.0,Vl.Br.,WL,Carnica,4.629029113,50.81115135,Neerijse,1.479214486,OA,OA,OA,13
+13_130,13_130,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.597238179,51.3347679,Brecht,0.661111111,OA,None,OA,13
+13_131,13_131,Cumulative,0.0,West-Vl.,WL,Unknown,3.261718974,50.92196635,Ingelmunster,5.428466348,None,None,None,13
+13_132,13_132,Cumulative,0.0,West-Vl.,WL,Unknown,3.261718974,50.92196635,Ingelmunster,4.605678233,None,None,None,13
+13_133,13_133,Cumulative,31900.540000000005,West-Vl.,Healthy,Carnica,2.891477451,50.851808,Ieper,0,OA,OA,None,13
+13_134,13_134,Cumulative,38624.53,West-Vl.,Healthy,Carnica,2.891477451,50.851808,Ieper,0,OA,OA,None,13
+13_135,13_135,Cumulative,0.0,Vl.Br.,WL,Carnica,5.0283876,50.843352,Neerlinter,5.097345133,None,OA,None,13
+13_136,13_136,Cumulative,0.0,Vl.Br.,WL,Carnica,5.0283876,50.843352,Neerlinter,1.334100058,None,OA,None,13
+13_137,13_137,Cumulative,65967.85999999999,Vl.Br.,Healthy,Carnica,4.693130751,50.85172925,Heverlee,0.621052632,OA,OA,OA,13
+13_138,13_138,Cumulative,465288.1099999999,Vl.Br.,Healthy,Carnica,4.693130751,50.85172925,Heverlee,5.581850824,OA,OA,OA,13
+13_139,13_139,Cumulative,0.0,Vl.Br.,WL,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,10.16286645,OA,Thymol,None,13
+13_14,13_14,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.629029113,50.81115135,Neerijse,0,OA,OA,OA,13
+13_140,13_140,Cumulative,2410016.9800000004,Vl.Br.,WL,Carnica,4.975432566,50.9689147,Scherpenheuvel-Zichem,0.941644562,OA,Thymol,None,13
+13_141,13_141,Cumulative,135800000.0,Antwerpen,WL,Carnica,4.901808003,51.0554081,Herselt,4.578034682,OA+Fluvalinate,None,None,13
+13_142,13_142,Cumulative,0.0,West.Vl.,WL,Carnica,2.722259264,50.84362245,Poperinge,3.200449186,OA+Thymol,None,None,13
+13_143,13_143,Cumulative,0.0,Vl.Br.,WL,Carnica,5.068392496,50.90566935,Kortenaken,0.470196224,Amitraz,OA,None,13
+13_144,13_144,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.886378182,50.9242724,Tielt-Winge,12.20591661,None,Clorophenyl,None,13
+13_145,13_145,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.886378182,50.9242724,Tielt-Winge,10.2524615,None,Clorophenyl,None,13
+13_146,13_146,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.4980446,51.2516344,Schoten,0.321019108,OA+Amitraz,OA,Thymol,13
+13_147,13_147,Cumulative,0.0,West.Vl.,Healthy,Carnica,3.124765,50.9444948,Roeselare,0,Thymol,OA,OA,13
+13_148,13_148,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.6386824,50.9769286,Haacht,5.210263721,OA,OA,None,13
+13_149,13_149,Cumulative,0.0,West.Vl.,Healthy,Unknown,3.463734552,50.844003,Anzegem,0.56812933,Thymol,OA,None,13
+13_15,13_15,Cumulative,34080.34,West.Vl.,Healthy,Carnica,3.124765,50.9444948,Roeselare,0.587560248,OA,OA,OA,13
+13_150,13_150,Cumulative,0.0,West.Vl.,Healthy,Unknown,3.463734552,50.844003,Anzegem,1.944714544,None,None,None,13
+13_16,13_16,Cumulative,0.0,West.Vl.,WL,Carnica,3.124765,50.9444948,Roeselare,7.108433735,OA,OA,OA,13
+13_17,13_17,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,4.0242373,50.8353611,Ninove,5.631578947,OA,None,None,13
+13_18,13_18,Cumulative,118641.18000000002,Oost. Vl.,WL,Carnica,4.0242373,50.8353611,Ninove,4.106292304,OA,None,None,13
+13_19,13_19,Cumulative,14331.52,Oost. Vl.,Healthy,Buckfast,3.9775435,50.9660758,Lede,0.524849048,None,None,None,13
+13_2,13_2,Cumulative,0.0,Limburg,WL,Carnica,5.449157219,51.10874,Peer,0.329520697,OA+Thymol,OA,OA,13
+13_20,13_20,Cumulative,0.0,Oost. Vl.,WL,Buckfast,3.9775435,50.9660758,Lede,0,None,None,None,13
+13_21,13_21,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.756807666,51.23004155,Assenede,12.61686747,Thymol,None,Thymol,13
+13_22,13_22,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,3.756807666,51.23004155,Assenede,9.18931368,Thymol,None,Thymol,13
+13_23,13_23,Cumulative,30542.75,West.Vl.,Healthy,Hybrid,2.891477451,50.851808,Ieper,0.199425384,OA,OA,None,13
+13_24,13_24,Cumulative,10012.31,West.Vl.,WL,Hybrid,2.891477451,50.851808,Ieper,1.167664671,OA,OA,None,13
+13_25,13_25,Cumulative,0.0,Limburg,Healthy,Queens,5.203424912,50.82694775,Sint-Truiden,7.53722795,OA+Amitraz,None,None,13
+13_26,13_26,Cumulative,147295.05,Limburg,WL,Queens,5.203424912,50.82694775,Sint-Truiden,31.96695922,OA+Amitraz,None,None,13
+13_27,13_27,Cumulative,137348.61,West.Vl.,WL,Carnica,3.124765,50.9444948,Roeselare,1.257171364,Thymol,OA,OA,13
+13_28,13_28,Cumulative,2114063.21,West.Vl.,Healthy,Carnica,3.124765,50.9444948,Roeselare,0.968150179,Thymol,OA,OA,13
+13_29,13_29,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.4980446,51.2516344,Schoten,0,OA+Amitraz,OA,Thymol,13
+13_3,13_3,Cumulative,0.0,Vl.Br.,WL,Carnica,4.8245687,50.9841594,Aarschot,0.56160209,Thymol,OA+Thymol,None,13
+13_30,13_30,Cumulative,0.0,Antwerpen,WL,Carnica,4.4980446,51.2516344,Schoten,0.608974359,OA+Amitraz,OA,Thymol,13
+13_31,13_31,Cumulative,20360.76,Oost. Vl.,Healthy,Unknown,3.8574284,51.1701927,Wachtebeke,1.298543689,Thymol,None,None,13
+13_32,13_32,Cumulative,0.0,Oost. Vl.,WL,Unknown,3.8574284,51.1701927,Wachtebeke,0.867093106,Thymol,None,None,13
+13_33,13_33,Cumulative,0.0,Limburg,Healthy,Carnica,5.6513208,50.8892784,Lanaken,0.756748323,OA+Thymol,None,Thymol,13
+13_34,13_34,Cumulative,0.0,Limburg,WL,Carnica,5.6513208,50.8892784,Lanaken,0,OA+Thymol,None,Thymol,13
+13_35,13_35,Cumulative,63131.600000000006,Oost. Vl.,Healthy,Carnica,3.852132137,50.91972825,Sint-Lievens-Houtem,4.175468851,Thymol,OA,Thymol,13
+13_36,13_36,Cumulative,11972.589999999997,Oost. Vl.,WL,Carnica,3.852132137,50.91972825,Sint-Lievens-Houtem,6.660059465,Thymol,OA,Thymol,13
+13_37,13_37,Cumulative,37438.66,Oost. Vl.,Healthy,Carnica,4.1233014,51.2180687,Sint-Gillis-Waas,0.295320309,OA+Thymol,None,OA+Thymol,13
+13_38,13_38,Cumulative,0.0,Oost. Vl.,WL,Carnica,4.1233014,51.2180687,Sint-Gillis-Waas,6.853902241,OA+Thymol,None,OA+Thymol,13
+13_39,13_39,Cumulative,0.0,Limburg,Healthy,Buckfast,5.696445,50.9635024,Maasmechelen,0.782726046,OA+Fluvalinate,None,None,13
+13_4,13_4,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.8245687,50.9841594,Aarschot,0,Thymol,OA+Thymol,None,13
+13_40,13_40,Cumulative,0.0,Limburg,WL,Buckfast,5.696445,50.9635024,Maasmechelen,7.776777678,OA+Fluvalinate,None,None,13
+13_41,13_41,Cumulative,0.0,West.Vl.,Healthy,Carnica,2.722259264,50.84362245,Poperinge,6.21014114,OA+Thymol,None,None,13
+13_42,13_42,Cumulative,0.0,West.Vl.,WL,Carnica,2.722259264,50.84362245,Poperinge,13.77690802,OA+Thymol,None,None,13
+13_43,13_43,Cumulative,0.0,Antwerpen,WL,Carnica,4.3997081,51.2211097,Antwerpen,1.662396812,OA+Thymol,OA,OA+Thymol,13
+13_44,13_44,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.3997081,51.2211097,Antwerpen,0,OA+Thymol,OA,OA+Thymol,13
+13_45,13_45,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.3997081,51.2211097,Antwerpen,3.050379572,OA+Thymol,OA,OA+Thymol,13
+13_46,13_46,Cumulative,1532050.6599999997,Antwerpen,WL,Carnica,4.3997081,51.2211097,Antwerpen,0.532425941,OA+Thymol,OA,OA+Thymol,13
+13_47,13_47,Cumulative,219100000.0,Oost. Vl.,Healthy,Hybrid,3.762778,50.7979739,Brakel,2.397969973,OA,OA,Thymol,13
+13_48,13_48,Cumulative,0.0,Oost. Vl.,Healthy,Hybrid,3.762778,50.7979739,Brakel,0,OA,OA,Thymol,13
+13_49,13_49,Cumulative,0.0,Oost. Vl.,WL,Hybrid,3.762778,50.7979739,Brakel,18.08890445,OA,OA,Thymol,13
+13_5,13_5,Cumulative,0.0,Vl.Br.,WL,Unknown,4.2437819,51.0198436,Malderen,2.213899293,OA+Thymol,None,None,13
+13_50,13_50,Cumulative,3061069.69,Oost. Vl.,WL,Hybrid,3.762778,50.7979739,Brakel,2.505307856,OA,OA,Thymol,13
+13_51,13_51,Cumulative,0.0,Limburg,Healthy,Carnica,5.5001456,50.9654864,Genk,0.194115863,Thymol,None,None,13
+13_52,13_52,Cumulative,41090000.0,Limburg,WL,Carnica,5.5001456,50.9654864,Genk,4.758465011,Thymol,None,None,13
+13_53,13_53,Cumulative,0.0,Limburg,WL,Carnica,5.5001456,50.9654864,Genk,0,Thymol,None,None,13
+13_54,13_54,Cumulative,84031.08,Limburg,Healthy,Carnica,5.5001456,50.9654864,Genk,0,Thymol,None,None,13
+13_55,13_55,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.6386824,50.9769286,Haacht,2.049512021,OA,OA,None,13
+13_56,13_56,Cumulative,550738.7200000001,Vl.Br.,WL,Carnica,4.6386824,50.9769286,Haacht,1.283311772,OA,OA,None,13
+13_57,13_57,Cumulative,21189.420000000002,Vl.Br.,Healthy,Carnica,4.6386824,50.9769286,Haacht,1.6,OA,OA,None,13
+13_58,13_58,Cumulative,256259.08000000002,Vl.Br.,WL,Carnica,4.6386824,50.9769286,Haacht,2.146389713,OA,OA,None,13
+13_59,13_59,Cumulative,0.0,West.Vl.,WL,Unknown,3.090295389,51.1846386,Jabbeke,5.289595079,OA,None,None,13
+13_6,13_6,Cumulative,0.0,Vl.Br.,Healthy,Unknown,4.2437819,51.0198436,Malderen,0.686419753,OA+Thymol,None,None,13
+13_60,13_60,Cumulative,18095.559999999998,West.Vl.,Healthy,Unknown,3.090295389,51.1846386,Jabbeke,1.235849057,OA,None,None,13
+13_61,13_61,Cumulative,16050.650000000001,West.Vl.,Healthy,Unknown,3.090295389,51.1846386,Jabbeke,0,OA,None,None,13
+13_62,13_62,Cumulative,0.0,West.Vl.,WL,Unknown,3.090295389,51.1846386,Jabbeke,0.358476475,OA,None,None,13
+13_63,13_63,Cumulative,56497.840000000004,Limburg,Healthy,Carnica,5.449157219,51.10874,Peer,1.216533584,OA,OA,None,13
+13_64,13_64,Cumulative,0.0,Limburg,WL,Carnica,5.449157219,51.10874,Peer,5.532261822,OA,OA,None,13
+13_65,13_65,Cumulative,0.0,Limburg,Healthy,Carnica,5.449157219,51.10874,Peer,0.325623859,OA,OA,None,13
+13_66,13_66,Cumulative,10907.890000000001,Limburg,WL,Carnica,5.449157219,51.10874,Peer,0.853467211,OA,OA,None,13
+13_67,13_67,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.886378182,50.9242724,Tielt-Winge,7.987912365,None,Clorophenyl,None,13
+13_68,13_68,Cumulative,0.0,Vl.Br.,WL,Carnica,4.886378182,50.9242724,Tielt-Winge,3.893632593,None,Clorophenyl,None,13
+13_69,13_69,Cumulative,0.0,Vl.Br.,WL,Carnica,4.886378182,50.9242724,Tielt-Winge,10.96014493,None,Clorophenyl,None,13
+13_7,13_7,Cumulative,0.0,Antwerpen,WL,Carnica,4.967812,51.2407915,Kasterlee,2.829937998,OA,OA,Thymol,13
+13_70,13_70,Cumulative,0.0,Vl.Br.,Healthy,Carnica,4.886378182,50.9242724,Tielt-Winge,5.094217024,None,Clorophenyl,None,13
+13_71,13_71,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.9911114,51.1042159,Lokeren,0,OA,None,None,13
+13_72,13_72,Cumulative,0.0,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,0,OA,None,None,13
+13_73,13_73,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.9911114,51.1042159,Lokeren,0.857580398,OA,None,None,13
+13_74,13_74,Cumulative,94141.18000000001,Oost. Vl.,Healthy,Carnica,3.9911114,51.1042159,Lokeren,0,OA,None,None,13
+13_75,13_75,Cumulative,0.0,Antwerpen,WL,Carnica,4.431231831,51.332759,Kapellen,9.363538296,None,None,None,13
+13_76,13_76,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.431231831,51.332759,Kapellen,0.725635593,None,None,None,13
+13_77,13_77,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.431231831,51.332759,Kapellen,2.374670185,None,None,None,13
+13_78,13_78,Cumulative,0.0,Antwerpen,WL,Carnica,4.431231831,51.332759,Kapellen,0,None,None,None,13
+13_79,13_79,Cumulative,27625.85,Antwerpen,Healthy,Carnica,4.6595103,51.2147918,Zandhoven,3.750288484,OA,OA,None,13
+13_8,13_8,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.967812,51.2407915,Kasterlee,0.609625668,OA,OA,Thymol,13
+13_80,13_80,Cumulative,0.0,Antwerpen,WL,Carnica,4.6595103,51.2147918,Zandhoven,0.635662538,OA,OA,None,13
+13_81,13_81,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.6595103,51.2147918,Zandhoven,20.63157895,OA,OA,None,13
+13_82,13_82,Cumulative,0.0,Antwerpen,WL,Carnica,4.6595103,51.2147918,Zandhoven,2.790217017,OA,OA,None,13
+13_83,13_83,Cumulative,0.0,Antwerpen,WL,Carnica,4.901808003,51.0554081,Herselt,2.239338183,OA+Fluvalinate,None,None,13
+13_84,13_84,Cumulative,44601.340000000004,Antwerpen,Healthy,Carnica,4.901808003,51.0554081,Herselt,3.683700319,OA+Fluvalinate,None,None,13
+13_85,13_85,Cumulative,19448.309999999998,Antwerpen,Healthy,Carnica,4.901808003,51.0554081,Herselt,0.296766271,OA+Fluvalinate,None,None,13
+13_86,13_86,Cumulative,15854.580000000002,Antwerpen,WL,Carnica,4.901808003,51.0554081,Herselt,7.011214953,OA+Fluvalinate,None,None,13
+13_87,13_87,Cumulative,0.0,Antwerpen,WL,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_88,13_88,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_89,13_89,Cumulative,0.0,Antwerpen,WL,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_9,13_9,Cumulative,0.0,West.Vl.,WL,Unknown,3.463734552,50.844003,Anzegem,7.147685029,Thymol,OA,None,13
+13_90,13_90,Cumulative,49070000.0,Antwerpen,WL,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_91,13_91,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_92,13_92,Cumulative,31775.449999999997,Antwerpen,Healthy,Carnica,4.670951732,51.1611887,Nijlen,0,Amitraz,OA,None,13
+13_93,13_93,Cumulative,0.0,Antwerpen,Healthy,Carnica,4.242326005,51.0924649,Bornem,0.284823285,Thymol,None,None,13
+13_94,13_94,Cumulative,0.0,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,3.530503979,Thymol,None,None,13
+13_95,13_95,Cumulative,57173.48,Antwerpen,Healthy,Carnica,4.242326005,51.0924649,Bornem,0.852526641,Thymol,None,None,13
+13_96,13_96,Cumulative,177100000.0,Antwerpen,Healthy,Carnica,4.242326005,51.0924649,Bornem,5.880260818,Thymol,None,None,13
+13_97,13_97,Cumulative,0.0,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,11.86477644,Thymol,None,None,13
+13_98,13_98,Cumulative,0.0,Antwerpen,WL,Carnica,4.242326005,51.0924649,Bornem,3.727506427,Thymol,None,None,13
+13_99,13_99,Cumulative,0.0,Oost. Vl.,WL,Carnica,3.8504738,51.029657,Laarne,0.513833992,OA+Thymol,Coumaphos,OA,13
