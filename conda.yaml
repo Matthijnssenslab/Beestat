@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - seaborn
+  - matplotlib
+  - pandas
+  - r-base=4.1.2
+  - snakemake
+  - mafft
+  - iqtree
+  - trimal
