@@ -1,0 +1,6 @@
+install.packages("BiocManager", repos = "http://cran.us.r-project.org")
+BiocManager::install('ggtree', update=FALSE, ask=FALSE)
+BiocManager::install('phangorn', update=FALSE, ask=FALSE)
+BiocManager::install('ggplot2', update=FALSE, ask=FALSE)
+BiocManager::install('gridExtra', update=FALSE, ask=FALSE)
+cat(file='output/.rlibs_installed.txt', '')

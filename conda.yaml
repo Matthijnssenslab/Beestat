@@ -5,8 +5,9 @@ dependencies:
   - seaborn
   - matplotlib
   - pandas
-  - r-base=4.1.2
+  - r-base=4.2.2
   - snakemake
-  - mafft
-  - iqtree
-  - trimal
+  - statannot
+  - pip
+  - pip:
+    - statannotations

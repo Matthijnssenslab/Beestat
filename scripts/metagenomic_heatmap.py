@@ -21,7 +21,7 @@ g = sns.clustermap(
     row_cluster=False,
     cmap='Blues',
     vmin=0,
-    col_colors = list(pd.Series(fac).map({'2012': '#ff7f0e', '2013': '#2ca02c'})),
+    col_colors = list(pd.Series(fac).map({'2012': '#D9D0D3', '2013': '#8D8680'})),
     xticklabels=False
 )
 g.savefig('output/sup_fig1.png', dpi=300)
