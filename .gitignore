@@ -6,3 +6,4 @@
 *old*
 *logs*
 .snakemake
+data/out*
