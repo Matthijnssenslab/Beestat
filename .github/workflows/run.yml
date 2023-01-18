@@ -1,0 +1,24 @@
+name: run
+
+on:
+  push:
+    branches: [ main ]
+
+defaults:
+  run:
+      shell: bash -l {0}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mamba-org/provision-with-micromamba@main
+        with:
+          environment-file: conda.yml
+          cache-downloads: true
+          environment-name: beestat
+      - name: build
+        run: |
+          micromamba activate beestat
+          snakemake --cores 1 -s generate_figures.smk
