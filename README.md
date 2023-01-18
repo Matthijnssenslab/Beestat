@@ -14,14 +14,13 @@ or if you have mamba
 
 and run
 
-  > conda activate beestat
+  > conda activate beestat  
   > snakemake --cores 1 -s generate_figures.smk
 
 The figures will be generated inside the 'output' folder, some dataframes will be generated inside the 'data' folder, prefixed with 'out_'.
 
 ## data
 
-https://gadm.org/download_country.html
  - gadm41_BEL_4.json
 
 geojson file for Belgium, downloaded from [gadm](https://gadm.org/download_country.html)
