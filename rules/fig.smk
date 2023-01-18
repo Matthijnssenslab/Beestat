@@ -11,6 +11,8 @@ rule fig1:
   '''
 
 rule fig2:
+  input:
+    'data/out_roc.tsv'
   output:
     'output/fig2.png'
   log:
