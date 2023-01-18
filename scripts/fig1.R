@@ -247,4 +247,4 @@ lay <- rbind(c(1,1,2,2,3,3),
 
 testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, aphtilidraw ,orthodraw,layout_matrix =lay)
 
-ggsave("output/fig1.pdf",testgrid, device = "pdf", height=14,width=23.5, limitsize=FALSE)
+ggsave("output/fig1.png",testgrid, device = "png", height=14,width=23.5, limitsize=FALSE)

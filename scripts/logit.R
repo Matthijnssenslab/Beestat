@@ -1,77 +1,122 @@
-suppressMessages(library('glmnet'))
-
+suppressMessages(library('caret'))
+suppressMessages(library('ROCR'))
+suppressMessages(library('tidyr'))
+# Prep data
 qpcr <- read.delim("data/qpcr_abs.tsv", row.names=1)
 metadf <- read.delim("data/metadata.tsv", row.names=1)
 metadf$colony_id <- as.factor(metadf$colony_id)
 metadf$status <- as.factor(metadf$status)
 metadf$status_year <- as.factor(metadf$status_year)
+metadf <- metadf %>% separate(status_year, '_', into=c('status', 'year'))
 metadf$year <- as.factor(as.character(metadf$year))
 metadf$sample <- rownames(metadf)
-
 qpcr$sample <- rownames(qpcr)
-
-
 df <- merge(qpcr, metadf, by='sample', all.x = TRUE)
 
 colnames(df) <- c(
   'sample',
-  'dwv','thog', 'thika', 'bmlv', 'unc', 'amfv', 'vdv',
-  'colony_id', 'status', 'lat', 'lon', 'year', 'status_year'
+  'dwv','aov', 'apthili', 'bmlv', 'aparli', 'amfv', 'vdv',
+  'colony_id', 'lat', 'lon', 'commune', 'status', 'year'
 )
+
 rownames(df) <- df$sample
 df$sample <- NULL
 
 df$dwv <- log10(df$dwv + 1)
-df$thog <- log10(df$thog + 1)
-df$thika <- log10(df$thika + 1)
+df$aov <- log10(df$aov + 1)
+df$apthili <- log10(df$apthili + 1)
 df$bmlv <- log10(df$bmlv + 1)
-df$unc <- log10(df$unc + 1)
+df$aparli <- log10(df$aparli + 1)
 df$amfv <- log10(df$amfv + 1)
 df$vdv <- log10(df$vdv + 1)
+df$statusbool <- factor(ifelse(df$status == 'wl', 1, 0))
+df$commune <- factor(df$commune)
 
+logdf <- df[, c(
+  'statusbool', 'year', 'dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv' ,'vdv', 'commune'
+)]
 
-# 2012
-set.seed(123)
-x <- model.matrix(
-  ~ year + vdv + dwv + thog + thika + bmlv + unc + amfv,
-  df
+# caret
+cv_full <- train(
+  statusbool ~ year + (dwv + aov + apthili + bmlv + aparli + amfv + vdv)^2, 
+  data = logdf, 
+  method = "glm",
+  family = "binomial",
+  trControl = trainControl(method = "cv", number = 10)
 )
-xint <- model.matrix(
-  ~ (year + vdv + dwv + thog + thika + bmlv + unc + amfv)^2,
-  df
+
+cv_yearassoc <- train(
+  statusbool ~  year+ (dwv + apthili + vdv)^2, 
+  data = logdf, 
+  method = "glm",
+  family = "binomial",
+  trControl = trainControl(method = "cv", number = 10)
 )
 
-y <- ifelse(df$status == 'wl', 1, 0)
-
-# 1 = dead, 0 = healthy
-set.seed(123)
-cv.mod <- cv.glmnet(x, y,family='binomial', type.measure='auc', keep=TRUE, alpha=00, lambda=NULL)
-cv.mod2 <- cv.glmnet(xint, y,family='binomial', type.measure='auc', keep=TRUE, alpha=00, lambda=NULL)
-
-coef(cv.mod)
-plot(cv.mod)
-
-rocs <- roc.glmnet(cv.mod2$fit.preval, newy = y)
-best <- cv.mod$index["min",]
-plot(rocs[[best]], type = "l")
-invisible(sapply(rocs, lines, col="grey"))
-lines(rocs[[best]], lwd = 2,col = "blue")
-
-# 2013
-set.seed(123)
-x <- model.matrix(
-  ~ (dwv + thog + thika + bmlv + unc + amfv)^2,
-  df[df$year == '13',]
+cv_simple <- train(
+  statusbool ~ year + dwv + aov + apthili + bmlv + aparli + amfv + vdv,
+  data=logdf,
+  method='glm',
+  family='binomial',
+  trControl = trainControl(method = 'cv', number=10)
 )
-y <- ifelse(df[df$year == '13',]$status == 'wl', 1, 0)
 
-# 1 = dead, 0 = healthy
-set.seed(123)
-cv.mod <- cv.glmnet(x, y,family='binomial', type.measure='auc', keep=TRUE, alpha=0.8, lambda=NULL)
-plot(cv.mod)
+pred_full <- predict(cv_full, logdf)
+pred_year_assoc <- predict(cv_yearassoc, logdf)
+pred_simple <- predict(cv_simple, logdf)
 
-rocs <- roc.glmnet(cv.mod$fit.preval, newy = y)
-best <- cv.mod$index["min",]
-plot(rocs[[best]], type = "l")
-invisible(sapply(rocs, lines, col="grey"))
-lines(rocs[[best]], lwd = 2,col = "red")
+full_mat <- confusionMatrix(
+  data = relevel(pred_full, ref = '0'), 
+  reference = relevel(logdf$statusbool, ref = '0')
+)
+yearassoc_mat <- confusionMatrix(
+  data = relevel(pred_year_assoc, ref = '0'), 
+  reference = relevel(logdf$statusbool, ref = '0')
+)
+simple_mat <- confusionMatrix(
+  data = relevel(pred_simple, ref = '0'), 
+  reference = relevel(logdf$statusbool, ref = '0')
+)
+
+# Write results.
+confdf <- cbind(
+  rbind(
+    as.matrix(full_mat, what='classes'),
+    as.matrix(full_mat, what='overall')
+  ),
+  rbind(
+    as.matrix(yearassoc_mat, what='classes'),
+    as.matrix(yearassoc_mat, what='overall')
+  ),
+  rbind(
+    as.matrix(simple_mat, what='classes'),
+    as.matrix(simple_mat, what='overall')
+  )
+)
+colnames(confdf) <- c('full', 'assoc', 'simple')
+write.table(confdf, 'data/out_conf.tsv', sep='\t')
+
+
+prob_full <- predict(cv_full, logdf, type='prob')$'1'
+prob_year_assoc <- predict(cv_yearassoc, logdf, type='prob')$'1'
+prob_simple <- predict(cv_simple, logdf, type='prob')$'1'
+
+
+perf_full <- prediction(prob_full, logdf$statusbool) %>%
+  performance(measure = "tpr", x.measure = "fpr")
+perf_yearassoc <- prediction(prob_year_assoc, logdf$statusbool) %>%
+  performance(measure = "tpr", x.measure = "fpr")
+perf_simple <- prediction(prob_simple, logdf$statusbool) %>%
+  performance(measure = "tpr", x.measure = "fpr")
+
+rocdf <- cbind(
+  perf_full@x.values[[1]],
+  perf_full@y.values[[1]],
+  perf_yearassoc@x.values[[1]],
+  perf_yearassoc@y.values[[1]],
+  perf_simple@x.values[[1]],
+  perf_simple@y.values[[1]]
+)
+colnames(rocdf) <- c('fullfpr', 'fulltpr', 'assocfpr', 'assoctpr', 'simplefpr', 'simpletpr')
+write.table(rocdf, 'data/out_roc.tsv', sep='\t')
+

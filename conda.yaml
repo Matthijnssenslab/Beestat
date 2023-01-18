@@ -2,12 +2,21 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
+  - jupyterlab
   - seaborn
   - matplotlib
+  - geopandas
   - pandas
   - r-base=4.2.2
   - snakemake
-  - statannot
-  - pip
-  - pip:
-    - statannotations
+  - statannotations
+  - r-phangorn
+  - r-ggplot2
+  - r-gridextra
+  - r-caret
+  - r-rocr
+  - geoplot
+  - matplotlib-scalebar
+  - pysal
+  - esda
+
