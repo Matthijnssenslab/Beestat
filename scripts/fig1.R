@@ -1,4 +1,3 @@
-setwd("/Users/deboutte/Bioinf/repo/KUL/Beestat")
 library(ggtree)
 library(phangorn)
 library(ggplot2)
