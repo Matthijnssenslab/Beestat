@@ -51,7 +51,10 @@ with open(snakemake.log[0], "w") as f:
     mi_res = []
     for v in ['dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv', 'vdv']:
         mi_rook = Moran(np.log10(vir_bel[v]+1), w_rook, permutations=10000)
-        mi_res.append([v, mi_rook.I, mi_rook.p_sim])
+        if v == 'aparli':
+            mi_res.append(['apparli', mi_rook.I, mi_rook.p_sim])
+        else:
+            mi_res.append([v, mi_rook.I, mi_rook.p_sim])
     mirdf = pd.DataFrame(mi_res)
     mirdf.columns = ['virus', 'moran-I', 'p-value']
     mirdf.to_csv('data/out_moranI.tsv', sep='\t')
@@ -158,7 +161,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['dwv']+1),
         color='#A42820',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_dwv
     )
     ax_kde_dwv.text(-0.05, 1.05, 'C', transform=ax_kde_dwv.transAxes,
@@ -177,7 +180,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['aov']+1),
         color='#5F5647',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_aov
     )
 
@@ -194,7 +197,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['apthili']+1),
         color='#9B110E',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_apthili
     )
 
@@ -212,7 +215,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['bmlv']+1),
         color='#3F5151',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_bmlv
     )
 
@@ -229,7 +232,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['aparli']+1),
         color='#4E2A1E',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_aparli
     )
 
@@ -246,7 +249,7 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['amfv']+1),
         color='#550307',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_amfv
     )
 
@@ -263,14 +266,14 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['vdv']+1),
         color='#0C1707',
         fill=True,
-        alpha=0.5,
+        alpha=0.8,
         ax=ax_kde_vdv
     )
 
     # set kde axs properly.
 
     for axname,x in zip(
-        ['dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv', 'vdv'],
+        ['dwv', 'aov', 'apthili', 'bmlv', 'apparli', 'amfv', 'vdv'],
         [ax_kde_dwv,ax_kde_aov,ax_kde_apthili, ax_kde_bmlv,ax_kde_aparli, ax_kde_amfv, ax_kde_vdv]
     ):
         x.set(xlim=(2, 6.5), ylim=(50.5, 51.5))
