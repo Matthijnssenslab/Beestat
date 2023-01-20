@@ -7,8 +7,7 @@ rule fig1:
   log:
     'logs/fig1.log'
   shell:'''
-  #Rscript scripts/fig1.R > {log} 2> {log}
-  Rscript scripts/fig1.R
+  Rscript scripts/fig1.R > {log} 2> {log}
   '''
 
 rule fig2:
