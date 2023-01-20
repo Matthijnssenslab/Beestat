@@ -2,7 +2,6 @@ library(ggtree)
 library(phangorn)
 library(ggplot2)
 library(gridExtra)
-pdf(NULL)
 
 # Apis Orthomyxovirus 1 ---------------------------------------------------
 
