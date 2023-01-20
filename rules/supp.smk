@@ -10,9 +10,9 @@ rule supfig1:
 
 rule supfig2:
   output:
-    'output/sup_fig2.png'
+    'output/sup_fig8.png'
   log:
-    'logs/supfig2.log'
+    'logs/supfig8.log'
   threads: 1
   script:
-    '../scripts/supfig2.py'
+    '../scripts/supfig8.py'

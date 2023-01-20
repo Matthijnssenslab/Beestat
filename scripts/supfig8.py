@@ -125,4 +125,4 @@ with open(snakemake.log[0], "w") as f:
             ax[5].set_frame_on(False)
             ax[5].set_yticklabels('')
             ax[5].tick_params(left = False)
-    plt.savefig('output/sup_fig2.png', dpi=300)
+    plt.savefig('output/sup_fig8.png', dpi=300)
