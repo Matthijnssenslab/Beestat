@@ -2,6 +2,7 @@ library(ggtree)
 library(phangorn)
 library(ggplot2)
 library(gridExtra)
+pdf(NULL)
 
 # Apis Orthomyxovirus 1 ---------------------------------------------------
 
@@ -65,7 +66,6 @@ orthodraw <- ggtree(orthotree, aes(color=group)) +
   theme(legend.position = 'none')
 orthodraw <- scaleClade(orthodraw, node=23, scale=.1) 
 orthodraw <- scaleClade(orthodraw, node=35, scale=.1) 
-orthodraw
 
 orthodraw_full <- ggtree(orthotree, aes(color=group)) + 
   geom_tiplab(align=TRUE) +
@@ -79,7 +79,6 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
   theme(legend.position = 'none')
-orthodraw_full
 ggsave('output/sup_fig7.png', orthodraw_full, dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
@@ -873,5 +872,4 @@ ggsave('output/sup_fig2.png', vdvdraw_full, dpi=300, width=12, height=12)
 # Combine -----------------------------------------------------------------
 
 testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,orthodraw,nrow=3, ncol=2)
-
 ggsave("output/fig1.png",testgrid, device = "png", height=15,width=20, limitsize=FALSE)
