@@ -1,5 +1,7 @@
 with open(snakemake.log[0], "w") as f:
     sys.stderr = sys.stdout = f
+    import os
+    os.environ['USE_PYGEOS'] = '0'
     import geopandas as gpd
     import geoplot as gplt
     import seaborn as sns
