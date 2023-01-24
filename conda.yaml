@@ -2,20 +2,19 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - jupyterlab
-  - seaborn
-  - matplotlib
-  - geopandas
-  - pandas
-  - r-base=4.2.2
-  - snakemake
-  - statannotations
-  - r-phangorn
-  - r-ggplot2
-  - r-gridextra
-  - r-caret
-  - r-rocr
-  - geoplot
-  - matplotlib-scalebar
-  - pysal
-  - esda
+  - conda-forge::seaborn=0.11.2
+  - conda-forge::matplotlib=3.6.3
+  - conda-forge::geopandas=0.12.2
+  - conda-forge::pandas=1.5.3
+  - conda-forge::r-base=4.2.2
+  - bioconda::snakemake=7.20.0
+  - conda-forge::statannotations=0.5.0
+  - conda-forge::r-phangorn=2.11.1
+  - conda-forge::r-ggplot2=3.4.0
+  - conda-forge::r-gridextra=2.3
+  - conda-forge::r-caret=6.0
+  - conda-forge::r-rocr=1.0_11
+  - conda-forge::geoplot=0.5.1
+  - conda-forge::matplotlib-scalebar=0.8.1
+  - conda-forge::pysal=2.1.0
+  - conda-forge::esda=2.4.3
