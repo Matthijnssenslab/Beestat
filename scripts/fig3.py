@@ -1,7 +1,5 @@
 with open(snakemake.log[0], "w") as f:
     sys.stderr = sys.stdout = f
-    import os
-    os.environ['USE_PYGEOS'] = '0'
     import geopandas as gpd
     import geoplot as gplt
     import seaborn as sns
@@ -32,6 +30,9 @@ with open(snakemake.log[0], "w") as f:
     be['NAME_3'] = be['NAME_3'].str.lower()
     be = be[be['NAME_1'] != 'Bruxelles']
     be = be[be['NAME_1'] != 'Wallonie']
+    # Belgium on a higher level for the outline.
+    be1 = gpd.read_file('data/gadm41_BEL_1.json')
+    be1 = be1[be1['NAME_1'] == 'Vlaanderen']
 
     #Metadata
     meta = pd.read_csv('data/metadata.tsv', sep='\t', index_col=0)
@@ -53,12 +54,10 @@ with open(snakemake.log[0], "w") as f:
     mi_res = []
     for v in ['dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv', 'vdv']:
         mi_rook = Moran(np.log10(vir_bel[v]+1), w_rook, permutations=10000)
-        if v == 'aparli':
-            mi_res.append(['apparli', mi_rook.I, mi_rook.p_sim])
-        else:
-            mi_res.append([v, mi_rook.I, mi_rook.p_sim])
+        mi_res.append([v, mi_rook.I, mi_rook.p_sim])
     mirdf = pd.DataFrame(mi_res)
     mirdf.columns = ['virus', 'moran-I', 'p-value']
+    mirdf['virus'] = ['DWV', 'AOV', 'Apthili', 'BMLV' , 'Apparli', 'AMFV' ,'VDV']
     mirdf.to_csv('data/out_moranI.tsv', sep='\t')
 
     ###################################################### Plotter
@@ -151,11 +150,6 @@ with open(snakemake.log[0], "w") as f:
 
     ########################################################################### kde
     ################ dwv
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_dwv
-    )
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -163,18 +157,20 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['dwv']+1),
         color='#A42820',
         fill=True,
-        alpha=0.8,
+        alpha=1,
+        ax=ax_kde_dwv
+    )
+
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
         ax=ax_kde_dwv
     )
     ax_kde_dwv.text(-0.05, 1.05, 'C', transform=ax_kde_dwv.transAxes,
                     size=20, weight='bold')
     ax_kde_dwv.add_artist(ScaleBar(distance_ms, location="upper center", border_pad=-2))
     ################ aov
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_aov
-    )
+
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -182,16 +178,15 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['aov']+1),
         color='#5F5647',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_aov
     )
-
-    ################ apthili
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_apthili
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_aov
     )
+    ################ apthili
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -199,17 +194,17 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['apthili']+1),
         color='#9B110E',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_apthili
     )
 
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_apthili
+    )
 
     ################ bmlv
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_bmlv
-    )
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -217,16 +212,15 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['bmlv']+1),
         color='#3F5151',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_bmlv
     )
-
-    ################ aparli
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_aparli
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_bmlv
     )
+    ################ aparli
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -234,16 +228,15 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['aparli']+1),
         color='#4E2A1E',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_aparli
     )
-
-    ################ amfv
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_amfv
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_aparli
     )
+    ################ amfv
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -251,16 +244,15 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['amfv']+1),
         color='#550307',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_amfv
     )
-
-    ################ vdv
-    be.plot(
-        edgecolor='gainsboro',
-        color='white',
-        ax=ax_kde_vdv
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_amfv
     )
+    ################ vdv
     sns.kdeplot(
         data=virdat,
         x='lat',
@@ -268,14 +260,18 @@ with open(snakemake.log[0], "w") as f:
         weights=np.log10(virdat['vdv']+1),
         color='#0C1707',
         fill=True,
-        alpha=0.8,
+        alpha=1,
         ax=ax_kde_vdv
     )
-
+    be1.boundary.plot(
+        color='black',
+        alpha=0.5,
+        ax=ax_kde_vdv
+    )
     # set kde axs properly.
 
     for axname,x in zip(
-        ['dwv', 'aov', 'apthili', 'bmlv', 'apparli', 'amfv', 'vdv'],
+        ['DWV', 'AOV', 'Apthili', 'BMLV', 'Apparli', 'AMFV', 'VDV'],
         [ax_kde_dwv,ax_kde_aov,ax_kde_apthili, ax_kde_bmlv,ax_kde_aparli, ax_kde_amfv, ax_kde_vdv]
     ):
         x.set(xlim=(2, 6.5), ylim=(50.5, 51.5))

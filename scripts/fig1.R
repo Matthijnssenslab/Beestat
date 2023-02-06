@@ -193,7 +193,7 @@ apthilidraw <- ggtree(apthilitree, aes(color=group)) +
   geom_nodepoint(aes(subset = as.numeric(label) > 70), color='black',size=2) +
   #geom_tiplab(align=TRUE, size=3) +
   scale_colour_manual(values = cols_aphtili) + 
-  geom_treescale(2,5) +
+  geom_treescale(2,4.5) +
   geom_cladelabel(node=67, label="Thika virus", align=T, geom='label', col='#02401B') +
   geom_cladelabel(node=90, label="Acyrthosiphon pisum virus", align=T, geom='label', col='#EABE94') +
   geom_cladelabel(node=89, label="Changjiang crawfish virus", align=T, geom='label', col='#0B775E') +
@@ -361,7 +361,7 @@ apparlidraw <- ggtree(apparlitree, aes(color=group)) +
   geom_cladelabel(node=134, label="RNA virosphere / Animal-derived partiti-viruses", align=T, geom='label', col='#35274A', offset=-0.6) +
   geom_cladelabel(node=145, label="RNA virosphere / Plant&Fungus partiti viruses", align=T, geom='label', col='#35274A') +
   scale_colour_manual(values = cols_apparli) + 
-  geom_treescale(2,14) +
+  geom_treescale(2,13.5) +
   xlim(0, 10) +
   theme(legend.position="left") +
   ggtitle("Apparli virus") + 
@@ -547,7 +547,7 @@ bmlvdraw <- ggtree(bmlvtree, aes(color=group)) +
   geom_cladelabel(node=110, label="Marafivirus", align=T, geom='label', col='#EABE94', offset = -0.5) +
   geom_cladelabel(node=150, label="Maculavirus", align=T, geom='label', col='#02401B', offset=-0.6) +
   geom_cladelabel(node=199, label="Maculavirus", align=T, geom='label', col='#02401B', offset=-0.65) +
-  geom_treescale(2,15) +
+  geom_treescale(2,14.5) +
   ggtitle("Bee-macula like virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
@@ -720,7 +720,7 @@ amfvdraw <- ggtree(amfvtree, aes(color=group)) +
   #geom_tiplab(align=TRUE, show.legend=FALSE, size=3)+
   #geom_text(aes(label=node)) +
   scale_colour_manual(values = cols_amfv) + 
-  geom_treescale(2,10) +
+  geom_treescale(2,9.5) +
   geom_cladelabel(node=108, label="Poxviridae", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=180, label="Baculoviridae", align=T, geom='label', col='#02401B', offset = -0.2) +
   geom_cladelabel(node=198, label="Phycodnaviridae", align=T, geom='label', col='#EABE94', offset=-0.35) +
@@ -809,7 +809,7 @@ cls_vdv <- list('NODE'=c("Deformed wing virus Belgium", "Varroa destructor virus
                                    "YP_009337127.1 - Hubei coleoptera virus 1",
                                    "YP_009337161.1 - Hubei picorna-like virus 27"))
 
-cols_vdv <-c("Iflaviridae" = "#02401B","Unclassified"= "#35274A", "NODE" = "#F2300F")
+cols_vdv <-c("Iflaviridae" = "#EABE94","Unclassified"= "#35274A", "NODE" = "#F2300F")
 vdvtree <- groupOTU(vdvtree, cls_vdv)
 
 vdvdraw <- ggtree(vdvtree, aes(color=group)) + 
@@ -835,7 +835,7 @@ vdvdraw <- ggtree(vdvtree, aes(color=group)) +
   geom_nodepoint(aes(subset = as.numeric(label) > 70), color='black',size=2) +
   #geom_tiplab(align=TRUE, show.legend=FALSE, size=3)+
   scale_colour_manual(values = cols_vdv)+
-  geom_treescale(2,3) +
+  geom_treescale(2,2.5) +
   ggtitle("DWV/VDV") + 
   xlim(0, 6)+
   theme(legend.position=c(0.8,0.5)) +
@@ -843,7 +843,7 @@ vdvdraw <- ggtree(vdvtree, aes(color=group)) +
   theme(legend.position="left") +
   ggtitle("VDV/DWV") + 
   theme(plot.title = element_text(hjust = 0.5)) +
-  scale_color_manual(name="Viral group",values=c("#02401B","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
+  scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw <- scaleClade(vdvdraw, node=69, scale=.1) 
 vdvdraw <- scaleClade(vdvdraw, node=51, scale=.1) 
@@ -861,7 +861,7 @@ vdvdraw_full <- ggtree(vdvtree, aes(color=group)) +
   theme(legend.position="left") +
   ggtitle("VDV/DWV") + 
   theme(plot.title = element_text(hjust = 0.5)) +
-  scale_color_manual(name="Viral group",values=c("#02401B","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
+  scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw_full
 ggsave('output/sup_fig2.png', vdvdraw_full, dpi=300, width=12, height=12)

@@ -16,7 +16,9 @@ with open(snakemake.log[0], "w") as f:
         sample_statdic[i] = r['status_year']
         sample_coldic[i] = r['colony_id']
 
+
     a = pd.read_csv('data/qpcr_abs.tsv', sep='\t', index_col=0)
+    a.columns = ['DWV', 'AOV', 'Apthili', 'BMLV', 'Apparli', 'AMFV', 'VDV']
     a['sample'] = a.index
     a['stat_year'] = a['sample'].map(sample_statdic)
     a['colony'] = a['sample'].map(sample_coldic)
@@ -44,7 +46,7 @@ with open(snakemake.log[0], "w") as f:
     for s in list(amelt.stat_year.unique()):
         tdf = a[a['stat_year'] == s]
         clis = []
-        for i, r in (tdf[['dwv','aov', 'apthili','bmlv','aparli','amfv']] > 1000).iterrows():
+        for i, r in (tdf[['DWV','AOV', 'Apthili','BMLV','Apparli','AMFV']] > 1000).iterrows():
             clis.append(sum(r))
         counts_shared[s] = dict(Counter(clis))
     cdf = pd.DataFrame(counts_shared)
@@ -54,13 +56,8 @@ with open(snakemake.log[0], "w") as f:
     cdf = cdf.melt(id_vars='count')
     cdf.columns = ['# viruses detected', 'stat_year', '% of samples']
 
-
-
-
-
-
     # Start plot
-    fig = plt.figure(constrained_layout=False, figsize=(14,14))
+    fig = plt.figure(constrained_layout=False, figsize=(14,12))
     gs = fig.add_gridspec(4,3)
     ax_l12 = fig.add_subplot(gs[0, 0:2])
     ax_l13 = fig.add_subplot(gs[1, 0:2])
@@ -103,13 +100,13 @@ with open(snakemake.log[0], "w") as f:
     annotator = Annotator(
         ax=ax_l12,
         pairs=[
-           (("dwv", "healthy_12"), ("dwv", "wl_12")),
-           (("aov", "healthy_12"), ("aov", "wl_12")),
-           (("apthili", "healthy_12"), ("apthili", "wl_12")),
-           (("bmlv", "healthy_12"), ("bmlv", "wl_12")),
-           (("aparli", "healthy_12"), ("aparli", "wl_12")),
-           (("amfv", "healthy_12"), ("amfv", "wl_12")),
-           (("vdv", "healthy_12"), ("vdv", "wl_12"))
+           (("DWV", "healthy_12"), ("DWV", "wl_12")),
+           (("AOV", "healthy_12"), ("AOV", "wl_12")),
+           (("Apthili", "healthy_12"), ("Apthili", "wl_12")),
+           (("BMLV", "healthy_12"), ("BMLV", "wl_12")),
+           (("Apparli", "healthy_12"), ("Apparli", "wl_12")),
+           (("AMFV", "healthy_12"), ("AMFV", "wl_12")),
+           (("VDV", "healthy_12"), ("VDV", "wl_12"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_12', 'wl_12'])],
         x='virus',
@@ -180,13 +177,13 @@ with open(snakemake.log[0], "w") as f:
     annotator = Annotator(
         ax=ax_l13,
         pairs=[
-           (("dwv", "healthy_13"), ("dwv", "wl_13")),
-           (("aov", "healthy_13"), ("aov", "wl_13")),
-           (("apthili", "healthy_13"), ("apthili", "wl_13")),
-           (("bmlv", "healthy_13"), ("bmlv", "wl_13")),
-           (("aparli", "healthy_13"), ("aparli", "wl_13")),
-           (("amfv", "healthy_13"), ("amfv", "wl_13")),
-           (("vdv", "healthy_13"), ("vdv", "wl_13"))
+           (("DWV", "healthy_13"), ("DWV", "wl_13")),
+           (("AOV", "healthy_13"), ("AOV", "wl_13")),
+           (("Apthili", "healthy_13"), ("Apthili", "wl_13")),
+           (("BMLV", "healthy_13"), ("BMLV", "wl_13")),
+           (("Apparli", "healthy_13"), ("Apparli", "wl_13")),
+           (("AMFV", "healthy_13"), ("AMFV", "wl_13")),
+           (("VDV", "healthy_13"), ("VDV", "wl_13"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_13', 'wl_13'])],
         x='virus',
