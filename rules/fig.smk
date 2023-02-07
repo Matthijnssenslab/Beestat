@@ -30,3 +30,11 @@ rule fig3:
   script:
     '../scripts/fig3.py'
 
+rule fig4:
+  output:
+    'output/fig4.png'
+  log:
+    'logs/fig4.log'
+  threads: 1
+  script:
+    '../scripts/fig4.py'

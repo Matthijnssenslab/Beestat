@@ -56,9 +56,23 @@ with open(snakemake.log[0], "w") as f:
                     cx = rx
                     cy = ry + rec.get_height()+1
                     if a[vir][k][2] == '-':
-                        ax[axix].annotate("{}\n{}".format(k , a[vir][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                        ax[axix].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
                     else:
-                        ax[axix].annotate("{}\n{}".format(k , a[vir][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                        ax[axix].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                    if vir == 'Apthili virus':
+                        if k == 'Capsid':
+                            ax[axix].annotate(a[vir][k][5], (cx, 4), fontsize=8)
+                        else:
+                            ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
+                    if vir == 'BMLV' and a[vir][k][5] != 'NA':
+                        if k == 'Cprotein':
+                            ax[axix].annotate(a[vir][k][5], (cx, 4), fontsize=8)
+                        else:
+                            ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
+                    if vir in ['Apparli virus', 'VDV']:
+                        ax[axix].annotate(a[vir][k][5], (cx, 2), fontsize=8)
+                    if vir == 'DWV':
+                        ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
             ax[axix].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
             ax[axix].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
             ax[axix].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
@@ -117,6 +131,10 @@ with open(snakemake.log[0], "w") as f:
                             ax[5].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
                         else:
                             ax[5].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                        if seg in ['PB2', 'PB1', 'PA', 'GP'] and a[vir][seg][k][5] != 'NA':
+                            ax[5].annotate(a[vir][seg][k][5], (cx, 4), fontsize=8)
+                        elif seg in ['NP', 'M']:
+                            ax[5].annotate(a[vir][seg][k][5], (cx, 3), fontsize=8)
             ax[5].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
             ax[5].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
             ax[5].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
@@ -126,3 +144,4 @@ with open(snakemake.log[0], "w") as f:
             ax[5].set_yticklabels('')
             ax[5].tick_params(left = False)
     plt.savefig('output/sup_fig8.png', dpi=300)
+
