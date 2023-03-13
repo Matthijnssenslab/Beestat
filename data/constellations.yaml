@@ -1,4 +1,4 @@
-Apthili virus:
+apthili virus:
   l: 9795
   RdRp: [209, 6436, '+', 2, '25.63%', 'YP_009337411.1']
   Capsid: [6495, 8423, '+', 3, '85.88%', 'QAY29271.1']
@@ -8,7 +8,7 @@ BMLV:
   Polyprotein: [50, 5506, '+', 2, '81.66%', 'YP_009160324.1']
   Hypothethical: [5623, 4742, '-', 2, '?%', 'NA']
   Cprotein: [5403, 6143, '+', 3, '92.45%', 'YP_009160325.1']
-Apis Orthomyxovirus 1:
+apis orthomyxovirus 1:
   PB1:
     l: 2296
     PB1: [24, 2113, '+', 3, '99.33%', 'QGA69818.1']
@@ -28,7 +28,7 @@ Apis Orthomyxovirus 1:
   NP:
     l: 1527
     NP: [77, 1462, '+', 2, '99.57%', 'QGA69821.1']
-Apparli virus:
+apparli virus:
   l: 1541
   RdRp: [55, 1470, '+', 1, '97.03%', 'APG78322.1']
 VDV:

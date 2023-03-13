@@ -18,3 +18,4 @@ dependencies:
   - conda-forge::matplotlib-scalebar=0.8.1
   - conda-forge::pysal=2.1.0
   - conda-forge::esda=2.4.3
+  - conda-forge::pillow=9.4.0

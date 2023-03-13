@@ -147,4 +147,4 @@ with open(snakemake.log[0], "w") as f:
                 arrowprops=dict(linewidth=3,arrowstyle="->", color='#79402E'))
     ax_tem2.annotate("", xytext=(2400, 1050), xy=(2250, 1300),
                 arrowprops=dict(linewidth=3,arrowstyle="->", color='#79402E'))
-    plt.savefig('output/fig4.png', dpi=300, bbox_inches='tight')
+    plt.savefig('output/fig4.pdf', dpi=300, bbox_inches='tight')

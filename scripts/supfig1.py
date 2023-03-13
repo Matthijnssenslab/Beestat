@@ -26,5 +26,4 @@ with open(snakemake.log[0], "w") as f:
         col_colors = list(pd.Series(fac).map({'2012': '#D9D0D3', '2013': '#8D8680'})),
         xticklabels=False
     )
-    g.savefig('output/sup_fig1.png', dpi=300)
-
+    g.savefig('output/sup_fig1.pdf', dpi=300)

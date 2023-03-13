@@ -12,7 +12,7 @@ with open(snakemake.log[0], "w") as f:
     vir = 'Apthili virus' 
     axix = 0
     for vir in a:
-        if vir != 'Apis Orthomyxovirus 1':
+        if vir != 'apis orthomyxovirus 1':
             ax[axix].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
             ax[axix].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
             ax[axix].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
@@ -82,7 +82,7 @@ with open(snakemake.log[0], "w") as f:
             ax[axix].set_yticklabels('')
             ax[axix].tick_params(left = False, bottom=False)
             axix += 1
-        if vir == 'Apis Orthomyxovirus 1':
+        if vir == 'apis orthomyxovirus 1':
             ax[5].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
             ax[5].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
             ax[5].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
@@ -143,5 +143,4 @@ with open(snakemake.log[0], "w") as f:
             ax[5].set_frame_on(False)
             ax[5].set_yticklabels('')
             ax[5].tick_params(left = False)
-    plt.savefig('output/sup_fig8.png', dpi=300)
-
+    plt.savefig('output/sup_fig8.pdf', dpi=300)

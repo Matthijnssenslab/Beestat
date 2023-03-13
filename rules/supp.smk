@@ -1,7 +1,7 @@
 # supplemental.
 rule supfig1:
   output:
-    'output/sup_fig1.png'
+    'output/sup_fig1.pdf'
   log:
     'logs/supfig1.log'
   threads: 1
@@ -10,7 +10,7 @@ rule supfig1:
 
 rule supfig2:
   output:
-    'output/sup_fig8.png'
+    'output/sup_fig8.pdf'
   log:
     'logs/supfig8.log'
   threads: 1

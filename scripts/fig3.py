@@ -57,7 +57,7 @@ with open(snakemake.log[0], "w") as f:
         mi_res.append([v, mi_rook.I, mi_rook.p_sim])
     mirdf = pd.DataFrame(mi_res)
     mirdf.columns = ['virus', 'moran-I', 'p-value']
-    mirdf['virus'] = ['DWV', 'AOV', 'Apthili', 'BMLV' , 'Apparli', 'AMFV' ,'VDV']
+    mirdf['virus'] = ['DWV', 'AOV', 'apthili', 'BMLV' , 'apparli', 'AMFV' ,'VDV']
     mirdf.to_csv('data/out_moranI.tsv', sep='\t')
 
     ###################################################### Plotter
@@ -271,7 +271,7 @@ with open(snakemake.log[0], "w") as f:
     # set kde axs properly.
 
     for axname,x in zip(
-        ['DWV', 'AOV', 'Apthili', 'BMLV', 'Apparli', 'AMFV', 'VDV'],
+        ['DWV', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'VDV'],
         [ax_kde_dwv,ax_kde_aov,ax_kde_apthili, ax_kde_bmlv,ax_kde_aparli, ax_kde_amfv, ax_kde_vdv]
     ):
         x.set(xlim=(2, 6.5), ylim=(50.5, 51.5))
@@ -284,4 +284,4 @@ with open(snakemake.log[0], "w") as f:
         #remove background patch (only needed for non-white background)
         x.patch.set_visible(False)
         x.set(ylabel=axname)
-    plt.savefig('output/fig3.png', dpi=300)
+    plt.savefig('output/fig3.pdf', dpi=300)

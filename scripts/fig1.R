@@ -20,7 +20,7 @@ orthotree <- phangorn::midpoint(orthotree)
 orthotree <- reorder(orthotree)
 cls_thog <- list(
   'NODE' = c(
-    'Apis orthomyxovirus 1'
+    'apis orthomyxovirus 1'
   ),
   'thogotolike' = c(
     "AED98371.1 - Jos virus","AHB34055.1 - Upolu virus",
@@ -58,7 +58,7 @@ orthodraw <- ggtree(orthotree, aes(color=group)) +
   geom_treescale(2,5) +
   geom_cladelabel(node=23, label="Thogoto-like viruses", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=35, label="Influenza", align=T, geom='label', col='#EABE94') +
-  ggtitle("Apis Orthomyxovirus 1") + 
+  ggtitle("apis orthomyxovirus 1") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
@@ -73,12 +73,12 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   geom_treescale(offset=-0.5) +
   geom_cladelabel(node=23, label="Thogoto-like viruses", align=T, geom='label', col='#0B775E', offset=1.4) +
   geom_cladelabel(node=35, label="Influenza", align=T, geom='label', col='#EABE94', offset=2.2) +
-  ggtitle("Apis Orthomyxovirus 1") + 
+  ggtitle("apis orthomyxovirus 1") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
   theme(legend.position = 'none')
-ggsave('output/sup_fig7.png', orthodraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
 
@@ -199,7 +199,7 @@ apthilidraw <- ggtree(apthilitree, aes(color=group)) +
   geom_cladelabel(node=89, label="Changjiang crawfish virus", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=59, label="Old port virus", align=T, geom='label', col='#7FC0C6') +
   xlim(0, 6) +
-  ggtitle("Apthilivirus") + 
+  ggtitle("apthilivirus") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(legend.position = 'none')
@@ -219,12 +219,12 @@ apthilidraw_full <- ggtree(apthilitree, aes(color=group)) +
   geom_cladelabel(node=89, label="Changjiang crawfish virus", align=T, geom='label', col='#0B775E', offset=0.9) +
   geom_cladelabel(node=59, label="Old port virus", align=T, geom='label', col='#7FC0C6', offset=0.55) +
   xlim(0, 4) +
-  ggtitle("Apthili virus") + 
+  ggtitle("apthili virus") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(legend.position = 'none')
 apthilidraw_full
-ggsave('output/sup_fig6.png', apthilidraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
 
 # Apparli virus -----------------------------------------------------------
 # acc 2 name mappings
@@ -364,7 +364,7 @@ apparlidraw <- ggtree(apparlitree, aes(color=group)) +
   geom_treescale(2,13.5) +
   xlim(0, 10) +
   theme(legend.position="left") +
-  ggtitle("Apparli virus") + 
+  ggtitle("apparli virus") + 
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(plot.title = element_text(size=22)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
@@ -384,12 +384,12 @@ apparlidraw_full <- ggtree(apparlitree, aes(color=group)) +
   geom_treescale(offset=-1.5) +
   xlim(0, 10.2) +
   theme(legend.position="left") +
-  ggtitle("Apparli virus") + 
+  ggtitle("apparli virus") + 
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(plot.title = element_text(size=22)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 apparlidraw_full
-ggsave('output/sup_fig5.png', apparlidraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
 
 
 # BMLV --------------------------------------------------------------------
@@ -548,7 +548,7 @@ bmlvdraw <- ggtree(bmlvtree, aes(color=group)) +
   geom_cladelabel(node=150, label="Maculavirus", align=T, geom='label', col='#02401B', offset=-0.6) +
   geom_cladelabel(node=199, label="Maculavirus", align=T, geom='label', col='#02401B', offset=-0.65) +
   geom_treescale(2,14.5) +
-  ggtitle("Bee-macula like virus") + 
+  ggtitle("bee-macula like virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(c(0,8)) +
@@ -568,13 +568,13 @@ bmlvdraw_full <- ggtree(bmlvtree, aes(color=group)) +
   geom_cladelabel(node=150, label="Maculavirus", align=T, geom='label', col='#02401B', offset=1.2) +
   geom_cladelabel(node=199, label="Maculavirus", align=T, geom='label', col='#02401B', offset=1.2) +
   geom_treescale(offset=-1.5) +
-  ggtitle("Bee-macula like virus") + 
+  ggtitle("bee-macula like virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(c(0,3.5)) +
   theme(legend.position = 'none')
 bmlvdraw_full
-ggsave('output/sup_fig4.png', bmlvdraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
 
 
 # AMFV --------------------------------------------------------------------
@@ -724,7 +724,7 @@ amfvdraw <- ggtree(amfvtree, aes(color=group)) +
   geom_cladelabel(node=108, label="Poxviridae", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=180, label="Baculoviridae", align=T, geom='label', col='#02401B', offset = -0.2) +
   geom_cladelabel(node=198, label="Phycodnaviridae", align=T, geom='label', col='#EABE94', offset=-0.35) +
-  ggtitle("Apis Melifera filamentous virus") + 
+  ggtitle("apis mellifera filamentous virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(0, 6 ) +
@@ -743,13 +743,13 @@ amfvdraw_full <- ggtree(amfvtree, aes(color=group)) +
   geom_cladelabel(node=108, label="Poxviridae", align=T, geom='label', col='#0B775E', offset=0.5) +
   geom_cladelabel(node=180, label="Baculoviridae", align=T, geom='label', col='#02401B', offset = 0.65) +
   geom_cladelabel(node=198, label="Phycodnaviridae", align=T, geom='label', col='#EABE94', offset=0.45) +
-  ggtitle("Apis Melifera filamentous virus") + 
+  ggtitle("apis mellifera filamentous virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(0, 2 ) +
   theme(legend.position = 'none')
 amfvdraw_full
-ggsave('output/sup_fig3.png', amfvdraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
 
 # dwv - vdv ---------------------------------------------------------------
 
@@ -864,11 +864,11 @@ vdvdraw_full <- ggtree(vdvtree, aes(color=group)) +
   scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw_full
-ggsave('output/sup_fig2.png', vdvdraw_full, dpi=300, width=12, height=12)
+ggsave('output/sup_fig2.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
 
 
 
 # Combine -----------------------------------------------------------------
 
 testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,orthodraw,nrow=3, ncol=2)
-ggsave("output/fig1.png",testgrid, device = "png", height=15,width=20, limitsize=FALSE)
+ggsave("output/fig1.pdf",testgrid, device = "pdf", height=15,width=20, limitsize=FALSE)
