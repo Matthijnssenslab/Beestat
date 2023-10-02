@@ -3,31 +3,89 @@ with open(snakemake.log[0], "w") as f:
     import yaml
     import matplotlib.pyplot as plt
     import matplotlib.patches as patches
+    import pandas as pd
+    import seaborn as sns
 
+    rename_dict = {
+        'Apparli_virus': 'apparli virus',
+        'VDV': 'VDV',
+        'DWV':'DWV',
+        'Apthili_virus': 'apthili virus',
+        'BMLV':'BMLV',
+        'Apis_Orthomyxovirus_1_PB1' : 'PB1',
+        'Apis_Orthomyxovirus_1_GP' : 'GP',
+        'Apis_Orthomyxovirus_1_PB2': 'PB2',
+        'Apis_Orthomyxovirus_1_M': 'M',
+        'Apis_Orthomyxovirus_1_PA': 'PA',
+        'Apis_Orthomyxovirus_1_NP': 'NP'
+    }
 
+    snpslis = []
+    with open('data/snps.vcf') as f:
+        for line in f:
+            if not line.startswith('#'):
+                vir = line.strip().split()[0]
+                af = float(line.strip().split()[7].split(';')[0].replace('AF=', ''))
+                pos = int(line.strip().split()[1])
+                if vir != 'AMFV':
+                    snpslis.append(
+                        [rename_dict[vir], pos, af]
+                    )
+    snpsdf = pd.DataFrame(snpslis)
+    snpsdf.columns = ['vir', 'pos','af']
     with open('data/constellations.yaml') as f:
         a = yaml.safe_load(f)
-    fig, ax = plt.subplots(6, figsize=(8,10), sharex=True, sharey=True)
-    #patches.Rectangle()
-    vir = 'Apthili virus' 
+    fig, ax = plt.subplots(
+        nrows=6,
+        ncols=2,
+        figsize=(16,10),
+        sharex=True,
+        sharey=False
+    )
+
     axix = 0
     for vir in a:
         if vir != 'apis orthomyxovirus 1':
-            ax[axix].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
-            ax[axix].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
-            ax[axix].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
-            ax[axix].axhline(linewidth=0.25, y=-1, color='#7f7f7f', linestyle='--')
-            ax[axix].axhline(linewidth=0.25, y=-2, color='#7f7f7f', linestyle='--')
-            ax[axix].set_xlim(-100,13500)
+            # SNPs & amplicon in right plot
+            ampl = patches.Rectangle(
+               (a[vir]['amplicon'][0][0], - 1.5),
+               a[vir]['amplicon'][1][1] - a[vir]['amplicon'][0][0],
+               1,
+               color='blue',
+               alpha=0.9
+            )
+            ax[axix,1].add_patch(ampl)
+            sns.histplot(
+                data=snpsdf[snpsdf['vir'] == vir],
+                x='pos',
+                ax=ax[axix,1],
+                binwidth=50
+            )
+            ax[axix,1].set_ylabel('SNP count')
+            ax[axix,1].set_ylim(-5,30)
+            # constellation in left plot
+            ax[axix,0].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
+            ax[axix,0].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
+            ax[axix,0].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
+            ax[axix,0].axhline(linewidth=0.25, y=-1, color='#7f7f7f', linestyle='--')
+            ax[axix,0].axhline(linewidth=0.25, y=-2, color='#7f7f7f', linestyle='--')
+            ax[axix,0].set_xlim(-100,13500)
             genrec = patches.Rectangle(
                 (1,-0.125),
                 a[vir]['l'],
                 0.25,
                 color='darkgray'
             )
-            ax[axix].add_patch(genrec)
+            genrec2 = patches.Rectangle(
+                (1,-0.125),
+                a[vir]['l'],
+                0.25,
+                color='darkgray'
+            )
+            ax[axix,0].add_patch(genrec)
+            ax[axix,1].add_patch(genrec2)
             for k in a[vir]:
-                if k != 'l':
+                if k != 'l' and k != 'amplicon':
                     i1 = a[vir][k][0]
                     i2 = a[vir][k][1]
                     if i1 > i2:
@@ -49,57 +107,84 @@ with open(snakemake.log[0], "w") as f:
                         color=reccol,
                         alpha = 0.9
                     )
-                    ax[axix].add_patch(rec)
-                    ax[axix].set_ylabel(vir)
-                    ax[axix].set_ylim(-4,4)
+                    ax[axix,0].add_patch(rec)
+                    ax[axix,0].set_ylabel(vir)
+                    ax[axix,0].set_ylim(-4,4)
                     rx, ry = rec.get_xy()
                     cx = rx
                     cy = ry + rec.get_height()+1
                     if a[vir][k][2] == '-':
-                        ax[axix].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                        ax[axix,0].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
                     else:
-                        ax[axix].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                        ax[axix,0].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
                     if vir == 'Apthili virus':
                         if k == 'Capsid':
-                            ax[axix].annotate(a[vir][k][5], (cx, 4), fontsize=8)
+                            ax[axix,0].annotate(a[vir][k][5], (cx, 4), fontsize=8)
                         else:
-                            ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
+                            ax[axix,0].annotate(a[vir][k][5], (cx, 3), fontsize=8)
                     if vir == 'BMLV' and a[vir][k][5] != 'NA':
                         if k == 'Cprotein':
-                            ax[axix].annotate(a[vir][k][5], (cx, 4), fontsize=8)
+                            ax[axix,0].annotate(a[vir][k][5], (cx, 4), fontsize=8)
                         else:
-                            ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
+                            ax[axix,0].annotate(a[vir][k][5], (cx, 3), fontsize=8)
                     if vir in ['Apparli virus', 'VDV']:
-                        ax[axix].annotate(a[vir][k][5], (cx, 2), fontsize=8)
+                        ax[axix,0].annotate(a[vir][k][5], (cx, 2), fontsize=8)
                     if vir == 'DWV':
-                        ax[axix].annotate(a[vir][k][5], (cx, 3), fontsize=8)
-            ax[axix].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
-            ax[axix].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
-            ax[axix].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
-            ax[axix].text(13500, -1, 'frame 2', fontsize=8, va='center', ha='center')
-            ax[axix].text(13500, -2, 'frame 3', fontsize=8, va='center', ha='center')
-            ax[axix].set_frame_on(False)
-            ax[axix].set_yticklabels('')
-            ax[axix].tick_params(left = False, bottom=False)
+                        ax[axix,0].annotate(a[vir][k][5], (cx, 3), fontsize=8)
+            ax[axix,0].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
+            ax[axix,0].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
+            ax[axix,0].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
+            ax[axix,0].text(13500, -1, 'frame 2', fontsize=8, va='center', ha='center')
+            ax[axix,0].text(13500, -2, 'frame 3', fontsize=8, va='center', ha='center')
+            ax[axix,0].set_frame_on(False)
+            ax[axix,0].set_yticklabels('')
+            ax[axix,0].tick_params(left = False, bottom=False)
             axix += 1
         if vir == 'apis orthomyxovirus 1':
-            ax[5].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
-            ax[5].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
-            ax[5].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
-            ax[5].axhline(linewidth=0.25, y=-1, color='#7f7f7f', linestyle='--')
-            ax[5].axhline(linewidth=0.25, y=-2, color='#7f7f7f', linestyle='--')
-            ax[5].set_xlim(-100,13500)
+            ax[5,0].axhline(linewidth=0.25, y=0, color='#7f7f7f', linestyle='--')
+            ax[5,0].axhline(linewidth=0.25, y=1, color='#7f7f7f', linestyle='--')
+            ax[5,0].axhline(linewidth=0.25, y=2, color='#7f7f7f', linestyle='--')
+            ax[5,0].axhline(linewidth=0.25, y=-1, color='#7f7f7f', linestyle='--')
+            ax[5,0].axhline(linewidth=0.25, y=-2, color='#7f7f7f', linestyle='--')
+            ax[5,0].set_xlim(-100,13500)
             # Iterate through segments per length.
             for seg, segstart in zip(['PB2', 'PB1', 'PA', 'GP', 'NP', 'M'], [1, 2501, 5001, 7501, 9501, 11501]):
+                if seg == 'PB1':
+                    ampl = patches.Rectangle(
+                       (segstart+a[vir][seg]['amplicon'][0][0], -1.5),
+                       a[vir][seg]['amplicon'][1][1] - a[vir][seg]['amplicon'][0][0],
+                       1,
+                       color='blue',
+                       alpha=0.9
+                    )
+                    ax[5,1].add_patch(ampl)
+                ax[5,1].set_ylabel("SNP count")
+                ax[5,1].set_ylim(-5,30)
+                tdf = snpsdf.copy()
+                tdf['pos'] = tdf['pos'] + segstart
+                sns.histplot(
+                    data=tdf[tdf['vir'] == seg],
+                    x='pos',
+                    ax=ax[5,1],
+                    binwidth=50
+                )
+                #ax[axix,1].set_ylabel('SNP count')
                 genrec = patches.Rectangle(
                     (segstart,-0.125),
                     a[vir][seg]['l'],
                     0.25,
                     color='darkgray'
                 )
-                ax[5].add_patch(genrec)
+                genrec2 = patches.Rectangle(
+                    (segstart,-0.125),
+                    a[vir][seg]['l'],
+                    0.25,
+                    color='darkgray'
+                )
+                ax[5,0].add_patch(genrec)
+                ax[5,1].add_patch(genrec2)
                 for k in a[vir][seg]:
-                    if k != 'l':
+                    if k != 'l' and k != 'amplicon':
                         i1 = a[vir][seg][k][0]
                         i2 = a[vir][seg][k][1]
                         if i1 > i2:
@@ -121,26 +206,27 @@ with open(snakemake.log[0], "w") as f:
                             color=reccol,
                             alpha = 0.9
                         )
-                        ax[5].add_patch(rec)
-                        ax[5].set_ylabel(vir)
-                        ax[5].set_ylim(-4,4)
+                        ax[5,0].add_patch(rec)
+                        ax[5,0].set_ylabel(vir)
+                        ax[5,0].set_ylim(-4,4)
                         rx, ry = rec.get_xy()
                         cx = rx
                         cy = ry + rec.get_height()+1
                         if a[vir][seg][k][2] == '-':
-                            ax[5].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                            ax[5,0].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
                         else:
-                            ax[5].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
+                            ax[5,0].annotate("{}\n{}".format(k , a[vir][seg][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
                         if seg in ['PB2', 'PB1', 'PA', 'GP'] and a[vir][seg][k][5] != 'NA':
-                            ax[5].annotate(a[vir][seg][k][5], (cx, 4), fontsize=8)
+                            ax[5,0].annotate(a[vir][seg][k][5], (cx, 4), fontsize=8)
                         elif seg in ['NP', 'M']:
-                            ax[5].annotate(a[vir][seg][k][5], (cx, 3), fontsize=8)
-            ax[5].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
-            ax[5].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
-            ax[5].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
-            ax[5].text(13500, -1, 'frame 2', fontsize=8, va='center', ha='center')
-            ax[5].text(13500, -2, 'frame 3', fontsize=8, va='center', ha='center')
-            ax[5].set_frame_on(False)
-            ax[5].set_yticklabels('')
-            ax[5].tick_params(left = False)
+                            ax[5,0].annotate(a[vir][seg][k][5], (cx, 3), fontsize=8)
+            ax[5,0].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
+            ax[5,0].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')
+            ax[5,0].text(13500, 2, 'frame 3', fontsize=8, va='center', ha='center')
+            ax[5,0].text(13500, -1, 'frame 2', fontsize=8, va='center', ha='center')
+            ax[5,0].text(13500, -2, 'frame 3', fontsize=8, va='center', ha='center')
+            ax[5,0].set_frame_on(False)
+            ax[5,0].set_yticklabels('')
+            ax[5,0].tick_params(left = False)
     plt.savefig('output/sup_fig8.pdf', dpi=300)
+
