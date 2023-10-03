@@ -8,7 +8,7 @@ rule supfig1:
   script:
     '../scripts/supfig1.py'
 
-rule supfig2:
+rule supfig8:
   output:
     'output/sup_fig8.pdf'
   log:
@@ -16,3 +16,12 @@ rule supfig2:
   threads: 1
   script:
     '../scripts/supfig8.py'
+
+rule supfig9:
+  output:
+    'output/sup_fig9.pdf'
+  log:
+    'logs/supfig9.log'
+  threads: 1
+  script:
+    '../scripts/supfig9.py'

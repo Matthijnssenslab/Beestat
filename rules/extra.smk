@@ -13,6 +13,9 @@ rule logit_data:
   input:
     'data/out_rlibs_installed.txt'
   output:
+    'data/out_cvfull_coef.tsv',
+    'data/out_cvyearassoc_coef.tsv',
+    'data/out_cvsimple_coef.tsv',
     'data/out_roc.tsv',
     'data/out_conf.tsv'
   threads: 1
@@ -21,3 +24,4 @@ rule logit_data:
   shell:'''
   Rscript scripts/logit.R > {log} 2> {log}
   '''
+
