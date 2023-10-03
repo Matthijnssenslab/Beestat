@@ -27,3 +27,4 @@ with open(snakemake.log[0], "w") as f:
         xticklabels=False
     )
     g.savefig('output/sup_fig1.pdf', dpi=300)
+    g.savefig('output/sup_fig1.png', dpi=300)

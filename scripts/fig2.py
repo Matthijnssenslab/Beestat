@@ -261,7 +261,7 @@ with open(snakemake.log[0], "w") as f:
 
     full_patch = mpatches.Patch(color='#899DA4', label='full model + 1° int.')
     assoc_patch = mpatches.Patch(color='#C93312', label='assoc. viruses + 1° int.')
-    simple_patch = mpatches.Patch(color='#DC863B', label='full model')
+    simple_patch = mpatches.Patch(color='#DC863B', label='simple model')
     ax_log.legend(title='formula', bbox_to_anchor=(0.95,0.35), handles = [full_patch, assoc_patch, simple_patch])
 
 
@@ -274,3 +274,4 @@ with open(snakemake.log[0], "w") as f:
     ax_log.text(-0.02, 1.01, 'D', transform=ax_log.transAxes, 
                 size=20, weight='bold')
     plt.savefig('output/fig2.pdf', dpi=300)
+    plt.savefig('output/fig2.png', dpi=300)

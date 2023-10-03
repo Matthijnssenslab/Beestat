@@ -79,6 +79,7 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   xlim(c(0,5)) +
   theme(legend.position = 'none')
 ggsave('output/sup_fig7.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
 
@@ -225,6 +226,7 @@ apthilidraw_full <- ggtree(apthilitree, aes(color=group)) +
   theme(legend.position = 'none')
 apthilidraw_full
 ggsave('output/sup_fig6.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
 
 # Apparli virus -----------------------------------------------------------
 # acc 2 name mappings
@@ -390,6 +392,7 @@ apparlidraw_full <- ggtree(apparlitree, aes(color=group)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 apparlidraw_full
 ggsave('output/sup_fig5.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
 
 
 # BMLV --------------------------------------------------------------------
@@ -575,7 +578,7 @@ bmlvdraw_full <- ggtree(bmlvtree, aes(color=group)) +
   theme(legend.position = 'none')
 bmlvdraw_full
 ggsave('output/sup_fig4.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
-
+ggsave('output/sup_fig4.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
 
 # AMFV --------------------------------------------------------------------
 
@@ -750,7 +753,7 @@ amfvdraw_full <- ggtree(amfvtree, aes(color=group)) +
   theme(legend.position = 'none')
 amfvdraw_full
 ggsave('output/sup_fig3.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
-
+ggsave('output/sup_fig3.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
 # dwv - vdv ---------------------------------------------------------------
 
 vdvdwv.acc2name <- read.delim("data/trees/vdv_dwv.acc2name", header=FALSE)
@@ -865,10 +868,11 @@ vdvdraw_full <- ggtree(vdvtree, aes(color=group)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw_full
 ggsave('output/sup_fig2.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
-
+ggsave('output/sup_fig2.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
 
 
 # Combine -----------------------------------------------------------------
 
 testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,orthodraw,nrow=3, ncol=2)
 ggsave("output/fig1.pdf",testgrid, device = "pdf", height=15,width=20, limitsize=FALSE)
+ggsave("output/fig1.png",testgrid, device = "png", height=15,width=20, limitsize=FALSE)

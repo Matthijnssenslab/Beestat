@@ -31,6 +31,7 @@ df$amfv <- log10(df$amfv + 1)
 df$vdv <- log10(df$vdv + 1)
 df$statusbool <- factor(ifelse(df$status == 'wl', 1, 0))
 df$commune <- factor(df$commune)
+df$year <- factor(df$year)
 
 logdf <- df[, c(
   'statusbool', 'year', 'dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv' ,'vdv', 'commune'
@@ -44,8 +45,15 @@ cv_full <- train(
   family = "binomial",
   trControl = trainControl(method = "cv", number = 10)
 )
-cv_full_sum <- summary(cv_full)
-write.table(cv_full_sum$coefficients, 'data/out_cvfull_coef.tsv', sep='\t')
+
+cv_full_sum <- data.frame(summary(cv_full)$coefficients)
+cv_full_or <- data.frame(cbind(exp(coef(cv_full$finalModel)), exp(confint(cv_full$finalModel))))
+cv_full_or_coef <- merge(cv_full_sum, cv_full_or, by.x = 0, by.y = 0)
+rownames(cv_full_or_coef) <- cv_full_or_coef$Row.names
+cv_full_or_coef$Row.names <- NULL
+cv_full_or_coef <- cv_full_or_coef[-1,]
+colnames(cv_full_or_coef) <- c('Estimate', 'se', 'z.value', 'pval', 'OR', 'OR_lower_95', 'OR_upper_95')
+write.table(cv_full_or_coef, 'data/out_cvfull_or.tsv', sep='\t')
 
 cv_yearassoc <- train(
   statusbool ~  year+ (dwv + apthili + vdv)^2, 
@@ -54,8 +62,15 @@ cv_yearassoc <- train(
   family = "binomial",
   trControl = trainControl(method = "cv", number = 10)
 )
-cv_yearassoc_sum <- summary(cv_yearassoc)
-write.table(cv_yearassoc_sum$coefficients, 'data/out_cvyearassoc_coef.tsv', sep='\t')
+
+cv_yearassoc_sum <- data.frame(summary(cv_yearassoc)$coefficients)
+cv_yearassoc_or <- data.frame(cbind(exp(coef(cv_yearassoc$finalModel)), exp(confint(cv_yearassoc$finalModel))))
+cv_yearassoc_or_coef <- merge(cv_yearassoc_sum, cv_yearassoc_or, by.x = 0, by.y = 0)
+rownames(cv_yearassoc_or_coef) <- cv_yearassoc_or_coef$Row.names
+cv_yearassoc_or_coef$Row.names <- NULL
+cv_yearassoc_or_coef <- cv_yearassoc_or_coef[-1,]
+colnames(cv_yearassoc_or_coef) <- c('Estimate', 'se', 'z.value', 'pval', 'OR', 'OR_lower_95', 'OR_upper_95')
+write.table(cv_yearassoc_or_coef, 'data/out_cvyearassoc_or.tsv', sep='\t')
 
 cv_simple <- train(
   statusbool ~ year + dwv + aov + apthili + bmlv + aparli + amfv + vdv,
@@ -64,8 +79,16 @@ cv_simple <- train(
   family='binomial',
   trControl = trainControl(method = 'cv', number=10)
 )
-cv_simple_sum <- summary(cv_simple)
-write.table(cv_simple_sum$coefficients, 'data/out_cvsimple_coef.tsv', sep='\t')
+
+cv_simple_sum <- data.frame(summary(cv_simple)$coefficients)
+cv_simple_or <- data.frame(cbind(exp(coef(cv_simple$finalModel)), exp(confint(cv_simple$finalModel))))
+cv_simple_or_coef <- merge(cv_simple_sum, cv_simple_or, by.x = 0, by.y = 0)
+rownames(cv_simple_or_coef) <- cv_simple_or_coef$Row.names
+cv_simple_or_coef$Row.names <- NULL
+cv_simple_or_coef <- cv_simple_or_coef[-1,]
+colnames(cv_simple_or_coef) <- c('Estimate', 'se', 'z.value', 'pval', 'OR', 'OR_lower_95', 'OR_upper_95')
+write.table(cv_simple_or_coef, 'data/out_cvsimple_or.tsv', sep='\t')
+
 
 pred_full <- predict(cv_full, logdf)
 pred_year_assoc <- predict(cv_yearassoc, logdf)
