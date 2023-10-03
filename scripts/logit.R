@@ -44,6 +44,8 @@ cv_full <- train(
   family = "binomial",
   trControl = trainControl(method = "cv", number = 10)
 )
+cv_full_sum <- summary(cv_full)
+write.table(cv_full_sum$coefficients, 'data/out_cvfull_coef.tsv', sep='\t')
 
 cv_yearassoc <- train(
   statusbool ~  year+ (dwv + apthili + vdv)^2, 
@@ -52,6 +54,8 @@ cv_yearassoc <- train(
   family = "binomial",
   trControl = trainControl(method = "cv", number = 10)
 )
+cv_yearassoc_sum <- summary(cv_yearassoc)
+write.table(cv_yearassoc_sum$coefficients, 'data/out_cvyearassoc_coef.tsv', sep='\t')
 
 cv_simple <- train(
   statusbool ~ year + dwv + aov + apthili + bmlv + aparli + amfv + vdv,
@@ -60,6 +64,8 @@ cv_simple <- train(
   family='binomial',
   trControl = trainControl(method = 'cv', number=10)
 )
+cv_simple_sum <- summary(cv_simple)
+write.table(cv_simple_sum$coefficients, 'data/out_cvsimple_coef.tsv', sep='\t')
 
 pred_full <- predict(cv_full, logdf)
 pred_year_assoc <- predict(cv_yearassoc, logdf)
