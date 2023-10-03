@@ -22,3 +22,7 @@ jobs:
         run: |
           micromamba activate beestat
           snakemake --cores 1 -s generate_figures.smk
+      - uses: actions/upload-artifact@v3
+        with:
+          name: figures
+          path: output
