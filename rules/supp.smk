@@ -18,10 +18,22 @@ rule supfig8:
     '../scripts/supfig8.py'
 
 rule supfig9:
+  input:
+    'data/out_cvfull_or.tsv',
+    'data/out_cvyearassoc_or.tsv',
+    'data/out_cvsimple_or.tsv'
   output:
     'output/sup_fig9.pdf'
   log:
     'logs/supfig9.log'
-  threads: 1
   script:
     '../scripts/supfig9.py'
+
+rule supfig10:
+  output:
+    'output/sup_fig10.pdf'
+  log:
+    'logs/supfig10.log'
+  threads: 1
+  script:
+    '../scripts/supfig10.py'
