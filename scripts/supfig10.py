@@ -62,10 +62,14 @@ with open(snakemake.log[0], "w") as f:
         )
     cdf = pd.DataFrame(correlations)
     cdf.columns = ['virus1', 'virus2', 'correlation', 'pvalue']
+    # Correct p-values bonferroni
+    cdf['padj'] = cdf['pvalue'] * len(cdf.index)
+    # Make sure they don't exceed 1
+    cdf.loc[cdf['padj'] > 1, 'padj'] = 1
     cordf = cdf[['virus1', 'virus2', 'correlation']].pivot(index='virus1', columns='virus2')
     cordf.columns = ['amfv', 'aov', 'apparli', 'apthili' ,'bmlv', 'dwv/vdv']
     cordf.index = ['amfv', 'aov', 'apparli', 'apthili' ,'bmlv', 'dwv/vdv']
-    pvaldf = cdf[['virus1', 'virus2', 'pvalue']].pivot(index='virus1', columns='virus2')
+    pvaldf = cdf[['virus1', 'virus2', 'padj']].pivot(index='virus1', columns='virus2')
     g = sns.heatmap(cordf, annot=pvaldf, cmap='vlag', center=0)
     g.set_title("spearman correlation")
     g.set_ylabel('metagenomics')
