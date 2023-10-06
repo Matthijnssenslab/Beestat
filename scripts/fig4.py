@@ -2,6 +2,7 @@ with open(snakemake.log[0], "w") as f:
     sys.stderr = sys.stdout = f
     import matplotlib.pyplot as plt
     import matplotlib.image as mpimg
+    from PIL import Image
     #mlpa
     mlpa = mpimg.imread('data/figures/mlpa.tif')
     tem1 = mpimg.imread('data/figures/tem_1.jpg')
@@ -149,3 +150,4 @@ with open(snakemake.log[0], "w") as f:
                 arrowprops=dict(linewidth=3,arrowstyle="->", color='#79402E'))
     plt.savefig('output/fig4.pdf', dpi=300, bbox_inches='tight')
     plt.savefig('output/fig4.png', dpi=300, bbox_inches='tight')
+    plt.savefig('output/fig4.tiff', dpi=300, bbox_inches='tight')

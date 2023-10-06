@@ -6,6 +6,7 @@ with open(snakemake.log[0], "w") as f:
     import numpy as np
     from itertools import combinations
     import seaborn as sns
+    from PIL import Image
 
     s2p = pd.read_table('data/sample_to_pool.txt', header=None)
     s2p.columns = ['sample', 'pool']
@@ -76,3 +77,4 @@ with open(snakemake.log[0], "w") as f:
     g.set_xlabel('qpcr')
     g.figure.savefig('output/sup_fig10.pdf', dpi=300)
     g.figure.savefig('output/sup_fig10.png', dpi=300)
+    g.figure.savefig('output/sup_fig10.tiff', dpi=300)

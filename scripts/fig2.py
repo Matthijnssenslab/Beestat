@@ -8,6 +8,7 @@ with open(snakemake.log[0], "w") as f:
     from scipy.stats import mannwhitneyu
     from statannotations.Annotator import Annotator
     from collections import Counter
+    from PIL import Image
 
     meta = pd.read_csv('data/metadata.tsv', sep='\t', index_col=0)
     sample_statdic = {}
@@ -275,3 +276,4 @@ with open(snakemake.log[0], "w") as f:
                 size=20, weight='bold')
     plt.savefig('output/fig2.pdf', dpi=300)
     plt.savefig('output/fig2.png', dpi=300)
+    plt.savefig('output/fig2.tiff', dpi=300)

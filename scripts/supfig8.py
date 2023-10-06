@@ -5,6 +5,7 @@ with open(snakemake.log[0], "w") as f:
     import matplotlib.patches as patches
     import pandas as pd
     import seaborn as sns
+    from PIL import Image
 
     rename_dict = {
         'Apparli_virus': 'apparli virus',
@@ -230,4 +231,5 @@ with open(snakemake.log[0], "w") as f:
             ax[5,0].tick_params(left = False)
     plt.savefig('output/sup_fig8.pdf', dpi=300)
     plt.savefig('output/sup_fig8.png', dpi=300)
+    plt.savefig('output/sup_fig8.tiff', dpi=300)
 

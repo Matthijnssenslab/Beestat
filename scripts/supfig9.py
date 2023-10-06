@@ -5,6 +5,7 @@ with open(snakemake.log[0], "w") as f:
     import pandas as pd
     import matplotlib.pyplot as plt
     import seaborn as sns
+    from PIL import Image
 
     fig, ax = plt.subplots(nrows=3, sharex=True, figsize=(8,12))
 
@@ -74,3 +75,4 @@ with open(snakemake.log[0], "w") as f:
     plt.tight_layout()
     plt.savefig('output/sup_fig9.pdf', dpi=300)
     plt.savefig('output/sup_fig9.png', dpi=300)
+    plt.savefig('output/sup_fig9.tiff', dpi=300)

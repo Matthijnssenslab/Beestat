@@ -3,6 +3,7 @@ with open(snakemake.log[0], "w") as f:
     import pandas as pd
     import seaborn as sns
     import matplotlib.pyplot as plt
+    from PIL import Image
     c = pd.read_csv('data/metagenomic_coverage.tsv', sep='\t', index_col=0)
     simpleix = []
     fac = []
@@ -28,3 +29,4 @@ with open(snakemake.log[0], "w") as f:
     )
     g.savefig('output/sup_fig1.pdf', dpi=300)
     g.savefig('output/sup_fig1.png', dpi=300)
+    g.savefig('output/sup_fig1.tiff', dpi=300)

@@ -13,6 +13,7 @@ with open(snakemake.log[0], "w") as f:
     from pysal.lib.weights import Rook
     from esda import Moran
     import math
+    from PIL import Image
     ###################################################### Defs
     # Define a jitter to move the samples around their commune centroid a little bit.
     def jitter(values,j):
@@ -286,3 +287,4 @@ with open(snakemake.log[0], "w") as f:
         x.set(ylabel=axname)
     plt.savefig('output/fig3.pdf', dpi=300)
     plt.savefig('output/fig3.png', dpi=300)
+    plt.savefig('output/fig3.tiff', dpi=300)
