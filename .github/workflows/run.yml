@@ -13,14 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: mamba-org/provision-with-micromamba@main
+      - uses: mamba-org/setup-micromamba@v1
         with:
+          micromamba-version: '1.3.1-0'
           environment-file: conda.yaml
-          cache-downloads: true
-          environment-name: beestat
+          init-shell: >-
+            bash
+          cache-environment: true
+          post-cleanup: 'all'
       - name: build
         run: |
-          micromamba activate beestat
           snakemake --cores 1 -s generate_figures.smk
       - uses: actions/upload-artifact@v3
         with:
