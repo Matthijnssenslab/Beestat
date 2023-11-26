@@ -78,8 +78,9 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
   theme(legend.position = 'none')
-ggsave('output/sup_fig7.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig7.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig8.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig8.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig8.tiff', orthodraw_full, device='tiff', dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
 
@@ -225,8 +226,9 @@ apthilidraw_full <- ggtree(apthilitree, aes(color=group)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(legend.position = 'none')
 apthilidraw_full
-ggsave('output/sup_fig6.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
-ggsave('output/sup_fig6.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.tiff', apthilidraw_full, device='tiff',dpi=300, width=12, height=12)
 
 # Apparli virus -----------------------------------------------------------
 # acc 2 name mappings
@@ -391,8 +393,9 @@ apparlidraw_full <- ggtree(apparlitree, aes(color=group)) +
   theme(plot.title = element_text(size=22)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 apparlidraw_full
-ggsave('output/sup_fig5.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig5.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.tiff', apparlidraw_full, device='tiff', dpi=300, width=12, height=12)
 
 
 # BMLV --------------------------------------------------------------------
@@ -577,8 +580,9 @@ bmlvdraw_full <- ggtree(bmlvtree, aes(color=group)) +
   xlim(c(0,3.5)) +
   theme(legend.position = 'none')
 bmlvdraw_full
-ggsave('output/sup_fig4.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig4.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.tiff', bmlvdraw_full, device='tiff', dpi=300, width=12, height=12)
 
 # AMFV --------------------------------------------------------------------
 
@@ -752,8 +756,9 @@ amfvdraw_full <- ggtree(amfvtree, aes(color=group)) +
   xlim(0, 2 ) +
   theme(legend.position = 'none')
 amfvdraw_full
-ggsave('output/sup_fig3.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig3.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.tiff', amfvdraw_full, device='tiff', dpi=300, width=12, height=12)
 # dwv - vdv ---------------------------------------------------------------
 
 vdvdwv.acc2name <- read.delim("data/trees/vdv_dwv.acc2name", header=FALSE)
@@ -764,12 +769,12 @@ names(vdvdwv.a2n) <- vdvdwv.acc2name$V1
 #vdv
 vdvtree <- read.tree("data/trees/vdv_dwv.treefile")
 vdvtree$tip.label <- as.character(vdvdwv.a2n[match(names(vdvdwv.a2n), vdvtree$tip.label)])
-vdvtree$tip.label[1] <- "Deformed wing virus Belgium"
-vdvtree$tip.label[2] <- "Varroa destructor virus 1 Belgium"
+vdvtree$tip.label[1] <- "Deformed wing virus A Belgium"
+vdvtree$tip.label[2] <- "Deformed wing virus B Belgium"
 vdvtree <- phangorn::midpoint(vdvtree)
 vdvtree <- reorder(vdvtree)
 
-cls_vdv <- list('NODE'=c("Deformed wing virus Belgium", "Varroa destructor virus 1 Belgium" ),
+cls_vdv <- list('NODE'=c("Deformed wing virus A Belgium", "Deformed wing virus B Belgium" ),
                 'Iflaviridae' = c("YP_145791.1 - Varroa destructor virus 1",
                                   "YP_009162630.1 - Bombyx mori iflavirus",
                                   "YP_009002581.1 - Antheraea pernyi iflavirus",
@@ -818,7 +823,7 @@ vdvtree <- groupOTU(vdvtree, cls_vdv)
 vdvdraw <- ggtree(vdvtree, aes(color=group)) + 
   geom_tiplab(aes(subset = isTip & label %in% c(
     "YP_145791.1 - Varroa destructor virus 1",
-    "Deformed wing virus Belgium", "Varroa destructor virus 1 Belgium",
+    "Deformed wing virus A Belgium", "Deformed wing virus B Belgium",
     "YP_008130310.1 - Nilaparvata lugens honeydew virus-3",
     "YP_008888537.1 - Formica exsecta virus 2",
     "YP_009328891.1 - Euscelidius variegatus virus 1",
@@ -839,12 +844,12 @@ vdvdraw <- ggtree(vdvtree, aes(color=group)) +
   #geom_tiplab(align=TRUE, show.legend=FALSE, size=3)+
   scale_colour_manual(values = cols_vdv)+
   geom_treescale(2,2.5) +
-  ggtitle("DWV/VDV") + 
+  ggtitle("DWV-A/DWV-B") + 
   xlim(0, 6)+
   theme(legend.position=c(0.8,0.5)) +
   theme(plot.title = element_text(size=22)) +
   theme(legend.position="left") +
-  ggtitle("VDV/DWV") + 
+  ggtitle("DWV-A/DWV-B") + 
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
@@ -857,19 +862,19 @@ vdvdraw_full <- ggtree(vdvtree, aes(color=group)) +
   geom_tiplab(align=TRUE, show.legend=FALSE, size=3)+
   scale_colour_manual(values = cols_vdv)+
   geom_treescale(offset=-1.5) +
-  ggtitle("DWV/VDV") + 
+  ggtitle("DWV-A/DWV-B") + 
   xlim(0, 4)+
   theme(legend.position=c(0.8,0.5)) +
   theme(plot.title = element_text(size=22)) +
   theme(legend.position="left") +
-  ggtitle("VDV/DWV") + 
+  ggtitle("DWV-A/DWV-B") + 
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw_full
-ggsave('output/sup_fig2.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
-ggsave('output/sup_fig2.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
-
+ggsave('output/sup_fig3.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.tiff', vdvdraw_full, device='tiff',dpi=300, width=12, height=12)
 
 # Combine -----------------------------------------------------------------
 
