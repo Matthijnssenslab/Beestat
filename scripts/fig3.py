@@ -58,7 +58,7 @@ with open(snakemake.log[0], "w") as f:
         mi_res.append([v, mi_rook.I, mi_rook.p_sim])
     mirdf = pd.DataFrame(mi_res)
     mirdf.columns = ['virus', 'moran-I', 'p-value']
-    mirdf['virus'] = ['DWV', 'AOV', 'apthili', 'BMLV' , 'apparli', 'AMFV' ,'VDV']
+    mirdf['virus'] = ['DWV-A', 'AOV', 'apthili', 'BMLV' , 'apparli', 'AMFV' ,'DWV-B']
     mirdf.to_csv('data/out_moranI.tsv', sep='\t')
 
     ###################################################### Plotter
@@ -272,7 +272,7 @@ with open(snakemake.log[0], "w") as f:
     # set kde axs properly.
 
     for axname,x in zip(
-        ['DWV', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'VDV'],
+        ['DWV-A', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'DWV-B'],
         [ax_kde_dwv,ax_kde_aov,ax_kde_apthili, ax_kde_bmlv,ax_kde_aparli, ax_kde_amfv, ax_kde_vdv]
     ):
         x.set(xlim=(2, 6.5), ylim=(50.5, 51.5))

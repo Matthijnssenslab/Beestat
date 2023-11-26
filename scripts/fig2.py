@@ -19,7 +19,7 @@ with open(snakemake.log[0], "w") as f:
 
 
     a = pd.read_csv('data/qpcr_abs.tsv', sep='\t', index_col=0)
-    a.columns = ['DWV', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'VDV']
+    a.columns = ['DWV-A', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'DWV-B']
     a['sample'] = a.index
     a['stat_year'] = a['sample'].map(sample_statdic)
     a['colony'] = a['sample'].map(sample_coldic)
@@ -47,7 +47,7 @@ with open(snakemake.log[0], "w") as f:
     for s in list(amelt.stat_year.unique()):
         tdf = a[a['stat_year'] == s]
         clis = []
-        for i, r in (tdf[['DWV','AOV', 'apthili','BMLV','apparli','AMFV', 'VDV']] > 1000).iterrows():
+        for i, r in (tdf[['DWV-A','AOV', 'apthili','BMLV','apparli','AMFV', 'DWV-B']] > 1000).iterrows():
             clis.append(sum(r))
         counts_shared[s] = dict(Counter(clis))
     cdf = pd.DataFrame(counts_shared)
@@ -95,19 +95,19 @@ with open(snakemake.log[0], "w") as f:
     ax_l12.legend([],[], frameon=False)
     ax_l12.set_xlabel('')
     ax_l12.set_xticklabels('')
-    ax_l12.set_ylabel('log10(absolute viralload + 1)')
+    ax_l12.set_ylabel('log10(abs viral load + 1)/2 bees')
 
 
     annotator = Annotator(
         ax=ax_l12,
         pairs=[
-           (("DWV", "healthy_12"), ("DWV", "wl_12")),
+           (("DWV-A", "healthy_12"), ("DWV-A", "wl_12")),
            (("AOV", "healthy_12"), ("AOV", "wl_12")),
            (("apthili", "healthy_12"), ("apthili", "wl_12")),
            (("BMLV", "healthy_12"), ("BMLV", "wl_12")),
            (("apparli", "healthy_12"), ("apparli", "wl_12")),
            (("AMFV", "healthy_12"), ("AMFV", "wl_12")),
-           (("VDV", "healthy_12"), ("VDV", "wl_12"))
+           (("DWV-B", "healthy_12"), ("DWV-B", "wl_12"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_12', 'wl_12'])],
         x='virus',
@@ -174,17 +174,17 @@ with open(snakemake.log[0], "w") as f:
     )
     ax_l13.legend([],[], frameon=False)
     ax_l13.set_xlabel('')
-    ax_l13.set_ylabel('log10(absolute viralload + 1)')
+    ax_l13.set_ylabel('log10(abs viral load + 1)/2 bees')
     annotator = Annotator(
         ax=ax_l13,
         pairs=[
-           (("DWV", "healthy_13"), ("DWV", "wl_13")),
+           (("DWV-A", "healthy_13"), ("DWV-A", "wl_13")),
            (("AOV", "healthy_13"), ("AOV", "wl_13")),
            (("apthili", "healthy_13"), ("apthili", "wl_13")),
            (("BMLV", "healthy_13"), ("BMLV", "wl_13")),
            (("apparli", "healthy_13"), ("apparli", "wl_13")),
            (("AMFV", "healthy_13"), ("AMFV", "wl_13")),
-           (("VDV", "healthy_13"), ("VDV", "wl_13"))
+           (("DWV-B", "healthy_13"), ("DWV-B", "wl_13"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_13', 'wl_13'])],
         x='virus',
