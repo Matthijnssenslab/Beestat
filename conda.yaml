@@ -17,5 +17,6 @@ dependencies:
   - conda-forge::geoplot=0.5.1
   - conda-forge::matplotlib-scalebar=0.8.1
   - conda-forge::pysal=2.1.0
+  - conda-forge::libpysal=4.7.0
   - conda-forge::esda=2.4.3
   - conda-forge::pillow=9.4.0
