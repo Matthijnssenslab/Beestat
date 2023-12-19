@@ -13,7 +13,7 @@ names(aov.a2n) <- aov.acc2name$V1
 #Orthomyxo
 orthotree <- read.tree("data/trees/orthomyxo.treefile")
 orthotree$tip.label <- as.character(aov.a2n[match(names(aov.a2n), orthotree$tip.label)])
-orthotree$tip.label[1] <- "Apis orthomyxovirus 1"
+orthotree$tip.label[1] <- "apis orthomyxovirus 1"
 
 #midpoint root
 orthotree <- phangorn::midpoint(orthotree)
