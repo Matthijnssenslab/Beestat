@@ -46,7 +46,7 @@ cols_ortho <- c("unclas" = "#35274A","thogotolike" = "#0B775E", "influenza" = "#
 
 orthodraw <- ggtree(orthotree, aes(color=group)) + 
   geom_tiplab(align = TRUE, aes(subset = isTip & label %in% c(
-    'Apis orthomyxovirus 1',
+    'apis orthomyxovirus 1',
     "QGA69818.1 - Varroa orthomyxovirus-1",
     "APG77896.1 - Hubei orthomyxo-like virus 4",
     "APG77906.1 - Hubei orthoptera virus 6",
