@@ -52,7 +52,7 @@ with open(snakemake.log[0], "w") as f:
                (a[vir]['amplicon'][0][0], - 1.5),
                a[vir]['amplicon'][1][1] - a[vir]['amplicon'][0][0],
                1,
-               color='blue',
+               color='#C93312',
                alpha=0.9
             )
             ax[axix,1].add_patch(ampl)
@@ -118,7 +118,7 @@ with open(snakemake.log[0], "w") as f:
                         ax[axix,0].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy-1), color='black', weight='bold', fontsize=10, ha='left', va='top')
                     else:
                         ax[axix,0].annotate("{}\n{}".format(k, a[vir][k][4]), (cx, cy), color='black', weight='bold', fontsize=10, ha='left', va='top')
-                    if vir == 'Apthili virus':
+                    if vir == 'apthili virus':
                         if k == 'Capsid':
                             ax[axix,0].annotate(a[vir][k][5], (cx, 4), fontsize=8)
                         else:
@@ -128,9 +128,9 @@ with open(snakemake.log[0], "w") as f:
                             ax[axix,0].annotate(a[vir][k][5], (cx, 4), fontsize=8)
                         else:
                             ax[axix,0].annotate(a[vir][k][5], (cx, 3), fontsize=8)
-                    if vir in ['Apparli virus', 'VDV']:
+                    if vir in ['apparli virus', 'DWV-B']:
                         ax[axix,0].annotate(a[vir][k][5], (cx, 2), fontsize=8)
-                    if vir == 'DWV':
+                    if vir == 'DWV-A':
                         ax[axix,0].annotate(a[vir][k][5], (cx, 3), fontsize=8)
             ax[axix,0].text(13500, 0, 'frame 1', fontsize=8, va='center', ha='center')
             ax[axix,0].text(13500, 1, 'frame 2', fontsize=8, va='center', ha='center')

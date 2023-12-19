@@ -222,8 +222,8 @@ with open(snakemake.log[0], "w") as f:
                     xycoords=ax_ps13.yaxis.label, textcoords='offset points',
                     size='large', ha='right', va='center')
     # Legend
-    health_patch = mpatches.Patch(color='#CCBA72', label='surviving')
-    weak_patch = mpatches.Patch(color='#79402E', label='not-surviving')
+    health_patch = mpatches.Patch(color='#CCBA72', label='surv.')
+    weak_patch = mpatches.Patch(color='#79402E', label='not-surv.')
     ax_l12.legend(title='Colony Status', bbox_to_anchor=(-0.075,0.1), handles = [health_patch, weak_patch])
 
 
