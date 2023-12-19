@@ -98,8 +98,8 @@ with open(snakemake.log[0], "w") as f:
     ax_12.margins(0)
 
     # Legend
-    health_patch = mpatches.Patch(color='#CCBA72', label='healthy')
-    weak_patch = mpatches.Patch(color='#79402E', label='weak')
+    health_patch = mpatches.Patch(color='#CCBA72', label='surviving')
+    weak_patch = mpatches.Patch(color='#79402E', label='not-surviving')
     ax_12.legend(title='Colony Status', bbox_to_anchor=(0,0.1), handles = [health_patch, weak_patch])
     ax_12.text(-0.05, 1.05, 'A', transform=ax_12.transAxes, 
                 size=20, weight='bold')
