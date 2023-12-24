@@ -15,8 +15,8 @@ with open(snakemake.log[0], "w") as f:
 
     a = pd.read_table('data/metagenomic_coverage.tsv', index_col=0)
     a = a[[
-        'apis mellifera filamentous virus',
-        'apis orthomyxovirus 1 - PB1',
+        'Apis mellifera filamentous virus',
+        'Apis orthomyxovirus 1 - PB1',
         'apthili virus',
         'apparli virus',
         'bee-macula like virus',

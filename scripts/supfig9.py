@@ -208,7 +208,7 @@ with open(snakemake.log[0], "w") as f:
                             alpha = 0.9
                         )
                         ax[5,0].add_patch(rec)
-                        ax[5,0].set_ylabel(vir)
+                        ax[5,0].set_ylabel('Apis orthomyxovirus 1')
                         ax[5,0].set_ylim(-4,4)
                         rx, ry = rec.get_xy()
                         cx = rx
