@@ -13,14 +13,14 @@ names(aov.a2n) <- aov.acc2name$V1
 #Orthomyxo
 orthotree <- read.tree("data/trees/orthomyxo.treefile")
 orthotree$tip.label <- as.character(aov.a2n[match(names(aov.a2n), orthotree$tip.label)])
-orthotree$tip.label[1] <- "apis orthomyxovirus 1"
+orthotree$tip.label[1] <- "Apis orthomyxovirus 1"
 
 #midpoint root
 orthotree <- phangorn::midpoint(orthotree)
 orthotree <- reorder(orthotree)
 cls_thog <- list(
   'NODE' = c(
-    'apis orthomyxovirus 1'
+    'Apis orthomyxovirus 1'
   ),
   'thogotolike' = c(
     "AED98371.1 - Jos virus","AHB34055.1 - Upolu virus",
@@ -46,7 +46,7 @@ cols_ortho <- c("unclas" = "#35274A","thogotolike" = "#0B775E", "influenza" = "#
 
 orthodraw <- ggtree(orthotree, aes(color=group)) + 
   geom_tiplab(align = TRUE, aes(subset = isTip & label %in% c(
-    'apis orthomyxovirus 1',
+    'Apis orthomyxovirus 1',
     "QGA69818.1 - Varroa orthomyxovirus-1",
     "APG77896.1 - Hubei orthomyxo-like virus 4",
     "APG77906.1 - Hubei orthoptera virus 6",
@@ -58,7 +58,7 @@ orthodraw <- ggtree(orthotree, aes(color=group)) +
   geom_treescale(2,5) +
   geom_cladelabel(node=23, label="Thogoto-like viruses", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=35, label="Influenza", align=T, geom='label', col='#EABE94') +
-  ggtitle("apis orthomyxovirus 1") + 
+  ggtitle("Apis orthomyxovirus 1") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
@@ -73,7 +73,7 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   geom_treescale(offset=-0.5) +
   geom_cladelabel(node=23, label="Thogoto-like viruses", align=T, geom='label', col='#0B775E', offset=1.4) +
   geom_cladelabel(node=35, label="Influenza", align=T, geom='label', col='#EABE94', offset=2.2) +
-  ggtitle("apis orthomyxovirus 1") + 
+  ggtitle("Apis orthomyxovirus 1") + 
   theme(plot.title = element_text(size=22)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
@@ -731,7 +731,7 @@ amfvdraw <- ggtree(amfvtree, aes(color=group)) +
   geom_cladelabel(node=108, label="Poxviridae", align=T, geom='label', col='#0B775E') +
   geom_cladelabel(node=180, label="Baculoviridae", align=T, geom='label', col='#02401B', offset = -0.2) +
   geom_cladelabel(node=198, label="Phycodnaviridae", align=T, geom='label', col='#EABE94', offset=-0.35) +
-  ggtitle("apis mellifera filamentous virus") + 
+  ggtitle("Apis mellifera filamentous virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(0, 6 ) +
@@ -750,7 +750,7 @@ amfvdraw_full <- ggtree(amfvtree, aes(color=group)) +
   geom_cladelabel(node=108, label="Poxviridae", align=T, geom='label', col='#0B775E', offset=0.5) +
   geom_cladelabel(node=180, label="Baculoviridae", align=T, geom='label', col='#02401B', offset = 0.65) +
   geom_cladelabel(node=198, label="Phycodnaviridae", align=T, geom='label', col='#EABE94', offset=0.45) +
-  ggtitle("apis mellifera filamentous virus") + 
+  ggtitle("Apis mellifera filamentous virus") + 
   theme(plot.title = element_text(hjust = 0.5))+
   theme(plot.title = element_text(size=22)) +
   xlim(0, 2 ) +
