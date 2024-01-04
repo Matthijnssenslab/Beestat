@@ -886,7 +886,7 @@ ggsave('output/sup_fig3.eps', vdvdraw_full, device=cairo_ps,dpi=300, width=12, h
 # Combine -----------------------------------------------------------------
 
 testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,orthodraw,nrow=3, ncol=2)
-ggsave("output/fig1.pdf",testgrid, device = "pdf", height=15,width=20, limitsize=FALSE)
-ggsave("output/fig1.png",testgrid, device = "png", height=15,width=20, limitsize=FALSE)
-ggsave("output/fig1.tiff",testgrid, device = "tiff", height=15,width=20, limitsize=FALSE)
-ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=15,width=20, limitsize=FALSE)
+ggsave("output/fig1.pdf",testgrid, device = "pdf", height=12,width=16, limitsize=FALSE)
+ggsave("output/fig1.png",testgrid, device = "png", height=12,width=16, limitsize=FALSE)
+ggsave("output/fig1.tiff",testgrid, device = "tiff", height=12,width=16, limitsize=FALSE)
+ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=12,width=16, limitsize=FALSE)
