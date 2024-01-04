@@ -288,3 +288,4 @@ with open(snakemake.log[0], "w") as f:
     plt.savefig('output/fig3.pdf', dpi=300)
     plt.savefig('output/fig3.png', dpi=300)
     plt.savefig('output/fig3.tiff', dpi=300)
+    plt.savefig('output/fig3.eps', dpi=300)

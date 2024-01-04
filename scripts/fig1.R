@@ -81,6 +81,7 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
 ggsave('output/sup_fig8.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
 ggsave('output/sup_fig8.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
 ggsave('output/sup_fig8.tiff', orthodraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig8.eps', orthodraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
 
@@ -229,6 +230,7 @@ apthilidraw_full
 ggsave('output/sup_fig7.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
 ggsave('output/sup_fig7.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
 ggsave('output/sup_fig7.tiff', apthilidraw_full, device='tiff',dpi=300, width=12, height=12)
+ggsave('output/sup_fig7.eps', apthilidraw_full, device=cairo_ps,dpi=300, width=12, height=12)
 
 # Apparli virus -----------------------------------------------------------
 # acc 2 name mappings
@@ -396,6 +398,7 @@ apparlidraw_full
 ggsave('output/sup_fig6.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
 ggsave('output/sup_fig6.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
 ggsave('output/sup_fig6.tiff', apparlidraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.eps', apparlidraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 
 # BMLV --------------------------------------------------------------------
@@ -583,6 +586,7 @@ bmlvdraw_full
 ggsave('output/sup_fig5.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
 ggsave('output/sup_fig5.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
 ggsave('output/sup_fig5.tiff', bmlvdraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.eps', bmlvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 # AMFV --------------------------------------------------------------------
 
@@ -759,6 +763,8 @@ amfvdraw_full
 ggsave('output/sup_fig4.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
 ggsave('output/sup_fig4.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
 ggsave('output/sup_fig4.tiff', amfvdraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.eps', amfvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
+
 # dwv - vdv ---------------------------------------------------------------
 
 vdvdwv.acc2name <- read.delim("data/trees/vdv_dwv.acc2name", header=FALSE)
@@ -875,6 +881,7 @@ vdvdraw_full
 ggsave('output/sup_fig3.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
 ggsave('output/sup_fig3.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
 ggsave('output/sup_fig3.tiff', vdvdraw_full, device='tiff',dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.eps', vdvdraw_full, device=cairo_ps,dpi=300, width=12, height=12)
 
 # Combine -----------------------------------------------------------------
 
@@ -882,3 +889,4 @@ testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,ort
 ggsave("output/fig1.pdf",testgrid, device = "pdf", height=15,width=20, limitsize=FALSE)
 ggsave("output/fig1.png",testgrid, device = "png", height=15,width=20, limitsize=FALSE)
 ggsave("output/fig1.tiff",testgrid, device = "tiff", height=15,width=20, limitsize=FALSE)
+ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=15,width=20, limitsize=FALSE)

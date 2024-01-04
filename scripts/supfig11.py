@@ -78,3 +78,4 @@ with open(snakemake.log[0], "w") as f:
     g.figure.savefig('output/sup_fig11.pdf', dpi=300)
     g.figure.savefig('output/sup_fig11.png', dpi=300)
     g.figure.savefig('output/sup_fig11.tiff', dpi=300)
+    g.figure.savefig('output/sup_fig11.eps', dpi=300)
