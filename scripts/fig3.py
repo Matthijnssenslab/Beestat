@@ -55,9 +55,9 @@ with open(snakemake.log[0], "w") as f:
     mi_res = []
     for v in ['dwv', 'aov', 'apthili', 'bmlv', 'aparli', 'amfv', 'vdv']:
         mi_rook = Moran(np.log10(vir_bel[v]+1), w_rook, permutations=10000)
-        mi_res.append([v, mi_rook.I, mi_rook.p_sim])
+        mi_res.append([v, mi_rook.I, mi_rook.seI_sim, mi_rook.p_sim])
     mirdf = pd.DataFrame(mi_res)
-    mirdf.columns = ['virus', 'moran-I', 'p-value']
+    mirdf.columns = ['virus', 'moran-I', 'sd', 'p-value']
     mirdf['virus'] = ['DWV-A', 'AOV', 'apthili', 'BMLV' , 'apparli', 'AMFV' ,'DWV-B']
     mirdf.to_csv('data/out_moranI.tsv', sep='\t')
 
@@ -123,11 +123,12 @@ with open(snakemake.log[0], "w") as f:
     ax_13.title.set_text('Samples 2013')
 
     # Morans
-    sns.barplot(
+    g = sns.barplot(
         data=mirdf,
         x='moran-I',
         y='virus',
         color='#9986A5',
+        xerr=mirdf['sd'],
         ax=ax_mor
     )
 
@@ -136,9 +137,9 @@ with open(snakemake.log[0], "w") as f:
     for i,r in mirdf.iterrows():
         morI = r['moran-I']
         if morI > 0:
-            placeX = morI + 0.005
+            placeX = morI + 0.05
         elif morI < 0:
-            placeX = 0 + 0.005
+            placeX = 0 + 0.05
         if r['p-value'] > 0.05:
             sigstat ='ns'
         else:
