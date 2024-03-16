@@ -150,5 +150,5 @@ with open(snakemake.log[0], "w") as f:
                 arrowprops=dict(linewidth=3,arrowstyle="->", color='#79402E'))
     plt.savefig('output/fig4.pdf', dpi=300, bbox_inches='tight')
     plt.savefig('output/fig4.png', dpi=300, bbox_inches='tight')
-    plt.savefig('output/fig4.tiff', dpi=300, bbox_inches='tight')
+    plt.savefig('output/fig4.tiff', dpi=300, bbox_inches='tight', pil_kwargs={"compression": "tiff_lzw"})
     plt.savefig('output/fig4.eps', dpi=300, bbox_inches='tight')

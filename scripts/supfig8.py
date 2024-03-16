@@ -90,5 +90,5 @@ with open(snakemake.log[0], "w") as f:
     plt.tight_layout()
     plt.savefig('output/sup_fig8.pdf', dpi=300)
     plt.savefig('output/sup_fig8.png', dpi=300)
-    plt.savefig('output/sup_fig8.tiff', dpi=300)
+    plt.savefig('output/sup_fig8.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     plt.savefig('output/sup_fig8.eps', dpi=300)

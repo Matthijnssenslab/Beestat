@@ -29,5 +29,5 @@ with open(snakemake.log[0], "w") as f:
     )
     g.savefig('output/sup_fig1.pdf', dpi=300)
     g.savefig('output/sup_fig1.png', dpi=300)
-    g.savefig('output/sup_fig1.tiff', dpi=300)
+    g.savefig('output/sup_fig1.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     g.savefig('output/sup_fig1.eps', dpi=300)

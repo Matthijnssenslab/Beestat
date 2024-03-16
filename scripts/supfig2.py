@@ -21,7 +21,7 @@ with open(snakemake.log[0], "w") as f:
             y='Ct',
             ax=ax[axix, 0]
         )
-        ax[axix, 0].set_ylabel(virus)
+        ax[axix, 0].set_ylabel(virus.replace('AMFV', 'AmFV'))
         sns.kdeplot(
             data=a[(a['Type'] != 'Standard') & (a['Virus'] == virus)],
             x='Ct',
@@ -31,5 +31,5 @@ with open(snakemake.log[0], "w") as f:
         axix+=1
     plt.savefig('output/sup_fig2.pdf', dpi=300)
     plt.savefig('output/sup_fig2.png', dpi=300)
-    plt.savefig('output/sup_fig2.tiff', dpi=300)
+    plt.savefig('output/sup_fig2.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     plt.savefig('output/sup_fig2.eps', dpi=300)

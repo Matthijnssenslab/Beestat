@@ -6,6 +6,7 @@ with open(snakemake.log[0], "w") as f:
     import numpy as np
     from itertools import combinations
     import seaborn as sns
+    import matplotlib.pyplot as plt
     from PIL import Image
 
     s2p = pd.read_table('data/sample_to_pool.txt', header=None)
@@ -68,14 +69,15 @@ with open(snakemake.log[0], "w") as f:
     # Make sure they don't exceed 1
     cdf.loc[cdf['padj'] > 1, 'padj'] = 1
     cordf = cdf[['virus1', 'virus2', 'correlation']].pivot(index='virus1', columns='virus2')
-    cordf.columns = ['amfv', 'aov', 'apparli', 'apthili' ,'bmlv', 'dwv-a/dwv-b']
-    cordf.index = ['amfv', 'aov', 'apparli', 'apthili' ,'bmlv', 'dwv-a/dwv-b']
+    cordf.columns = ['AmFV', 'AOV', 'apparli', 'apthili' ,'BMLV', 'DWV-A/DWV-B']
+    cordf.index = ['AmFV', 'AOV', 'apparli', 'apthili' ,'BMLV', 'DWV-A/DWV-B']
     pvaldf = cdf[['virus1', 'virus2', 'padj']].pivot(index='virus1', columns='virus2')
     g = sns.heatmap(cordf, annot=pvaldf, cmap='vlag', center=0)
     g.set_title("spearman correlation")
     g.set_ylabel('metagenomics')
     g.set_xlabel('qpcr')
+    plt.tight_layout()
     g.figure.savefig('output/sup_fig9.pdf', dpi=300)
     g.figure.savefig('output/sup_fig9.png', dpi=300)
-    g.figure.savefig('output/sup_fig9.tiff', dpi=300)
+    g.figure.savefig('output/sup_fig9.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     g.figure.savefig('output/sup_fig9.eps', dpi=300)

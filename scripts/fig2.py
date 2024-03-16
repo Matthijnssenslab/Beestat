@@ -19,7 +19,7 @@ with open(snakemake.log[0], "w") as f:
 
 
     a = pd.read_csv('data/qpcr_abs.tsv', sep='\t', index_col=0)
-    a.columns = ['DWV-A', 'AOV', 'apthili', 'BMLV', 'apparli', 'AMFV', 'DWV-B']
+    a.columns = ['DWV-A', 'AOV', 'apthili', 'BMLV', 'apparli', 'AmFV', 'DWV-B']
     a['sample'] = a.index
     a['stat_year'] = a['sample'].map(sample_statdic)
     a['colony'] = a['sample'].map(sample_coldic)
@@ -47,7 +47,7 @@ with open(snakemake.log[0], "w") as f:
     for s in list(amelt.stat_year.unique()):
         tdf = a[a['stat_year'] == s]
         clis = []
-        for i, r in (tdf[['DWV-A','AOV', 'apthili','BMLV','apparli','AMFV', 'DWV-B']] > 1000).iterrows():
+        for i, r in (tdf[['DWV-A','AOV', 'apthili','BMLV','apparli','AmFV', 'DWV-B']] > 1000).iterrows():
             clis.append(sum(r))
         counts_shared[s] = dict(Counter(clis))
     cdf = pd.DataFrame(counts_shared)
@@ -106,7 +106,7 @@ with open(snakemake.log[0], "w") as f:
            (("apthili", "healthy_12"), ("apthili", "wl_12")),
            (("BMLV", "healthy_12"), ("BMLV", "wl_12")),
            (("apparli", "healthy_12"), ("apparli", "wl_12")),
-           (("AMFV", "healthy_12"), ("AMFV", "wl_12")),
+           (("AmFV", "healthy_12"), ("AmFV", "wl_12")),
            (("DWV-B", "healthy_12"), ("DWV-B", "wl_12"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_12', 'wl_12'])],
@@ -183,7 +183,7 @@ with open(snakemake.log[0], "w") as f:
            (("apthili", "healthy_13"), ("apthili", "wl_13")),
            (("BMLV", "healthy_13"), ("BMLV", "wl_13")),
            (("apparli", "healthy_13"), ("apparli", "wl_13")),
-           (("AMFV", "healthy_13"), ("AMFV", "wl_13")),
+           (("AmFV", "healthy_13"), ("AmFV", "wl_13")),
            (("DWV-B", "healthy_13"), ("DWV-B", "wl_13"))
         ],
         data=amelt[amelt['stat_year'].isin(['healthy_13', 'wl_13'])],
@@ -276,5 +276,5 @@ with open(snakemake.log[0], "w") as f:
                 size=20, weight='bold')
     plt.savefig('output/fig2.pdf', dpi=300)
     plt.savefig('output/fig2.png', dpi=300)
-    plt.savefig('output/fig2.tiff', dpi=300)
+    plt.savefig('output/fig2.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     plt.savefig('output/fig2.eps', dpi=300)

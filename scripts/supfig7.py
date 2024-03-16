@@ -231,5 +231,5 @@ with open(snakemake.log[0], "w") as f:
             ax[5,0].tick_params(left = False)
     plt.savefig('output/sup_fig7.pdf', dpi=300)
     plt.savefig('output/sup_fig7.png', dpi=300)
-    plt.savefig('output/sup_fig7.tiff', dpi=300)
+    plt.savefig('output/sup_fig7.tiff', dpi=300, pil_kwargs={"compression": "tiff_lzw"})
     plt.savefig('output/sup_fig7.eps', dpi=300)
