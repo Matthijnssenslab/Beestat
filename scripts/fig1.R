@@ -886,7 +886,7 @@ vdvdraw_full
 # Combine -----------------------------------------------------------------
 
 testgrid <- grid.arrange(apparlidraw,apthilidraw, bmlvdraw, orthodraw, nrow=2, ncol=2)
-ggsave("output/fig1.pdf",testgrid, device = "pdf", height=10.5,width=14, limitsize=FALSE)
-ggsave("output/fig1.png",testgrid, device = "png", height=10.5,width=14, limitsize=FALSE)
-ggsave("output/fig1.tiff",testgrid, device = "tiff", height=10.5,width=14, limitsize=FALSE)
-ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=10.5,width=14, limitsize=FALSE)
+ggsave("output/fig1.pdf",testgrid, device = "pdf", height=10,width=15, limitsize=FALSE)
+ggsave("output/fig1.png",testgrid, device = "png", height=10,width=15, limitsize=FALSE)
+ggsave("output/fig1.tiff",testgrid, device = "tiff", height=10,width=15, limitsize=FALSE)
+ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=10,width=15, limitsize=FALSE)
