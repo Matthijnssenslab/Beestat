@@ -18,6 +18,27 @@ rule supfig2:
     '../scripts/supfig2.py'
 
 
+rule supfig7:
+  output:
+    'output/sup_fig7.pdf'
+  log:
+    'logs/supfig7.log'
+  threads: 1
+  script:
+    '../scripts/supfig7.py'
+
+rule supfig8:
+  input:
+    'data/out_cvfull_or.tsv',
+    'data/out_cvyearassoc_or.tsv',
+    'data/out_cvsimple_or.tsv'
+  output:
+    'output/sup_fig8.pdf'
+  log:
+    'logs/supfig8.log'
+  script:
+    '../scripts/supfig8.py'
+
 rule supfig9:
   output:
     'output/sup_fig9.pdf'
@@ -26,24 +47,3 @@ rule supfig9:
   threads: 1
   script:
     '../scripts/supfig9.py'
-
-rule supfig10:
-  input:
-    'data/out_cvfull_or.tsv',
-    'data/out_cvyearassoc_or.tsv',
-    'data/out_cvsimple_or.tsv'
-  output:
-    'output/sup_fig10.pdf'
-  log:
-    'logs/supfig10.log'
-  script:
-    '../scripts/supfig10.py'
-
-rule supfig11:
-  output:
-    'output/sup_fig11.pdf'
-  log:
-    'logs/supfig11.log'
-  threads: 1
-  script:
-    '../scripts/supfig11.py'

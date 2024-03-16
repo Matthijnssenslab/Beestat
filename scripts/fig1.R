@@ -78,10 +78,10 @@ orthodraw_full <- ggtree(orthotree, aes(color=group)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   xlim(c(0,5)) +
   theme(legend.position = 'none')
-ggsave('output/sup_fig8.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig8.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
-ggsave('output/sup_fig8.tiff', orthodraw_full, device='tiff', dpi=300, width=12, height=12)
-ggsave('output/sup_fig8.eps', orthodraw_full, device=cairo_ps, dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.pdf', orthodraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.png', orthodraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.tiff', orthodraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig6.eps', orthodraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 # apthili virus -----------------------------------------------------------
 
@@ -227,10 +227,10 @@ apthilidraw_full <- ggtree(apthilitree, aes(color=group)) +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(legend.position = 'none')
 apthilidraw_full
-ggsave('output/sup_fig7.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
-ggsave('output/sup_fig7.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
-ggsave('output/sup_fig7.tiff', apthilidraw_full, device='tiff',dpi=300, width=12, height=12)
-ggsave('output/sup_fig7.eps', apthilidraw_full, device=cairo_ps,dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.pdf', apthilidraw_full, device='pdf',dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.png', apthilidraw_full, device='png',dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.tiff', apthilidraw_full, device='tiff',dpi=300, width=12, height=12)
+ggsave('output/sup_fig5.eps', apthilidraw_full, device=cairo_ps,dpi=300, width=12, height=12)
 
 # Apparli virus -----------------------------------------------------------
 # acc 2 name mappings
@@ -395,10 +395,10 @@ apparlidraw_full <- ggtree(apparlitree, aes(color=group)) +
   theme(plot.title = element_text(size=22)) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 apparlidraw_full
-ggsave('output/sup_fig6.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig6.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
-ggsave('output/sup_fig6.tiff', apparlidraw_full, device='tiff', dpi=300, width=12, height=12)
-ggsave('output/sup_fig6.eps', apparlidraw_full, device=cairo_ps, dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.pdf', apparlidraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.png', apparlidraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.tiff', apparlidraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig4.eps', apparlidraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 
 # BMLV --------------------------------------------------------------------
@@ -583,10 +583,10 @@ bmlvdraw_full <- ggtree(bmlvtree, aes(color=group)) +
   xlim(c(0,3.5)) +
   theme(legend.position = 'none')
 bmlvdraw_full
-ggsave('output/sup_fig5.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig5.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
-ggsave('output/sup_fig5.tiff', bmlvdraw_full, device='tiff', dpi=300, width=12, height=12)
-ggsave('output/sup_fig5.eps', bmlvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.pdf', bmlvdraw_full, device='pdf', dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.png', bmlvdraw_full, device='png', dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.tiff', bmlvdraw_full, device='tiff', dpi=300, width=12, height=12)
+ggsave('output/sup_fig3.eps', bmlvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 # AMFV --------------------------------------------------------------------
 
@@ -760,10 +760,10 @@ amfvdraw_full <- ggtree(amfvtree, aes(color=group)) +
   xlim(0, 2 ) +
   theme(legend.position = 'none')
 amfvdraw_full
-ggsave('output/sup_fig4.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
-ggsave('output/sup_fig4.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
-ggsave('output/sup_fig4.tiff', amfvdraw_full, device='tiff', dpi=300, width=12, height=12)
-ggsave('output/sup_fig4.eps', amfvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
+#ggsave('output/sup_fig4.pdf', amfvdraw_full, device='pdf', dpi=300, width=12, height=12)
+#ggsave('output/sup_fig4.png', amfvdraw_full, device='png', dpi=300, width=12, height=12)
+#ggsave('output/sup_fig4.tiff', amfvdraw_full, device='tiff', dpi=300, width=12, height=12)
+#ggsave('output/sup_fig4.eps', amfvdraw_full, device=cairo_ps, dpi=300, width=12, height=12)
 
 # dwv - vdv ---------------------------------------------------------------
 
@@ -878,15 +878,15 @@ vdvdraw_full <- ggtree(vdvtree, aes(color=group)) +
   scale_color_manual(name="Viral group",values=c("#EABE94","#F2300F","#35274A"), labels=c("Iflaviridae","Iflavirus Belgium","Unclassified")) +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 6)))
 vdvdraw_full
-ggsave('output/sup_fig3.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
-ggsave('output/sup_fig3.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
-ggsave('output/sup_fig3.tiff', vdvdraw_full, device='tiff',dpi=300, width=12, height=12)
-ggsave('output/sup_fig3.eps', vdvdraw_full, device=cairo_ps,dpi=300, width=12, height=12)
+#ggsave('output/sup_fig3.pdf', vdvdraw_full, device='pdf',dpi=300, width=12, height=12)
+#ggsave('output/sup_fig3.png', vdvdraw_full, device='png',dpi=300, width=12, height=12)
+#ggsave('output/sup_fig3.tiff', vdvdraw_full, device='tiff',dpi=300, width=12, height=12)
+#ggsave('output/sup_fig3.eps', vdvdraw_full, device=cairo_ps,dpi=300, width=12, height=12)
 
 # Combine -----------------------------------------------------------------
 
-testgrid <- grid.arrange(amfvdraw,bmlvdraw,apparlidraw,vdvdraw, apthilidraw ,orthodraw,nrow=3, ncol=2)
-ggsave("output/fig1.pdf",testgrid, device = "pdf", height=12,width=16, limitsize=FALSE)
-ggsave("output/fig1.png",testgrid, device = "png", height=12,width=16, limitsize=FALSE)
-ggsave("output/fig1.tiff",testgrid, device = "tiff", height=12,width=16, limitsize=FALSE)
-ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=12,width=16, limitsize=FALSE)
+testgrid <- grid.arrange(apparlidraw,apthilidraw, bmlvdraw, orthodraw, nrow=2, ncol=2)
+ggsave("output/fig1.pdf",testgrid, device = "pdf", height=10.5,width=14, limitsize=FALSE)
+ggsave("output/fig1.png",testgrid, device = "png", height=10.5,width=14, limitsize=FALSE)
+ggsave("output/fig1.tiff",testgrid, device = "tiff", height=10.5,width=14, limitsize=FALSE)
+ggsave("output/fig1.eps",testgrid, device = cairo_ps, height=10.5,width=14, limitsize=FALSE)
