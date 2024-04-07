@@ -35,7 +35,7 @@ with open(snakemake.log[0], "w") as f:
             percpos.append(
                 [
                     '{}'.format(v),
-                    len(a[(a[v] > 1000) & (a['stat_year'] == s)])/len(a[a['stat_year'] == s]) * 100,
+                    len(a[(a[v] > 0) & (a['stat_year'] == s)])/len(a[a['stat_year'] == s]) * 100,
                     '{}'.format(s)
                 ]
             )
